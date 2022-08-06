@@ -1,9 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import layoutStyles from "../styles/Layout.module.scss";
 
-export default Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <>
       <header>
@@ -13,4 +12,4 @@ export default Layout = ({ children }) => {
       <Footer />
     </>
   );
-};
+}
