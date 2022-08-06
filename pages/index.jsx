@@ -5,6 +5,7 @@ import Menu from "../components/Menu";
 import Landing from "../components/Landing";
 import Footer from "../components/Footer";
 import styles from "../styles/Home.module.css";
+import Hero from "../components/Hero";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -26,6 +27,14 @@ export default function Home() {
 
       <Landing heading={t("landing:heading")} tagline={t("landing:tagline")} />
 
+      <Hero
+        id="about"
+        image={"/images/me.png"}
+        heading={t("about:heading")}
+        tagline={t("about:tagline")}
+        description={t("about:about")}
+      />
+
       <Footer />
     </div>
   );
@@ -34,7 +43,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["test", "navbar", "landing"]))
+      ...(await serverSideTranslations(locale, ["navbar", "landing", "about"]))
     }
   };
 }
