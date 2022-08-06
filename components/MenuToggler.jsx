@@ -1,7 +1,7 @@
 import React from "react";
 import menuTogglerStyles from "../styles/MenuToggler.module.scss";
 
-export default function MenuToggler({ isActiveToggler, handleToggler }) {
+export default function MenuToggler({ isActiveToggler, handleMenuToggler }) {
   function getTogglerClass() {
     return isActiveToggler
       ? `${menuTogglerStyles["menu-toggler"]} ${menuTogglerStyles["active"]}`
@@ -9,7 +9,7 @@ export default function MenuToggler({ isActiveToggler, handleToggler }) {
   }
 
   return (
-    <div className={getTogglerClass()} onClick={handleToggler}>
+    <div className={getTogglerClass()} onClick={handleMenuToggler}>
       <div
         className={`${menuTogglerStyles["bar"]} ${menuTogglerStyles["half"]} ${menuTogglerStyles["start"]}`}
       ></div>

@@ -1,8 +1,14 @@
 import Head from "next/head";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import Menu from "../components/Menu";
 import Landing from "../components/Landing";
+import Footer from "../components/Footer";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   const landing = {
     heading: "Mohammad Abd Alrahman",
     tagline: "Full Stack Developer"
@@ -16,7 +22,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Landing heading={landing.heading} tagline={landing.tagline} />
+      <Menu t={t} />
+
+      <Landing heading={t("landing:heading")} tagline={t("landing:tagline")} />
+
+      <Footer />
     </div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["test", "navbar", "landing"]))
+    }
+  };
 }

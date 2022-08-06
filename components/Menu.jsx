@@ -3,21 +3,29 @@ import { useState } from "react";
 import MenuToggler from "./MenuToggler";
 import Navbar from "./Navbar";
 
-export default function Menu() {
+export default function Menu({ t }) {
   const [isActiveToggler, setActiveToggler] = useState(false);
 
-  function handleToggler() {
+  function handleMenuToggler() {
     setActiveToggler(!isActiveToggler);
+  }
+
+  function handleNavItem() {
+    setActiveToggler(false);
   }
 
   return (
     <header>
       <MenuToggler
         isActiveToggler={isActiveToggler}
-        handleToggler={handleToggler}
+        handleMenuToggler={handleMenuToggler}
       />
 
-      <Navbar isActiveToggler={isActiveToggler} />
+      <Navbar
+        t={t}
+        isActiveToggler={isActiveToggler}
+        handleNavItem={handleNavItem}
+      />
     </header>
   );
 }
