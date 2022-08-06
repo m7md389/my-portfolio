@@ -1,0 +1,30 @@
+@use "./abstracts" as *;
+
+html {
+  font-size: 62.5%;
+  font-family: $font-family--primary;
+  color: color--text-primary;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: color--text-primary;
+}
+
+p {
+  font-size: $font-size--text;
+  font-weight: $font-weight--text;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+}

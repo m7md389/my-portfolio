@@ -1,0 +1,26 @@
+@use "./abstracts" as *;
+
+.landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+
+  &-heading {
+    font-size: 10rem;
+    font-family: $font-family--secondary;
+    padding: 1rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #000;
+    user-select: none;
+  }
+
+  &-tagline {
+    font-size: 2rem;
+    font-weight: $font-weight--text;
+  }
+}

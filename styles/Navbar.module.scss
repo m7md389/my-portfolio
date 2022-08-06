@@ -1,0 +1,44 @@
+@use "./abstracts" as *;
+
+.nav {
+  background-color: $background-color--nav;
+  height: 100vh;
+  position: fixed;
+  transition: all 650ms cubic-bezier(1, 0, 0, 1);
+  width: 100%;
+  top: -100vh;
+  z-index: 75;
+
+  &.active {
+    top: 0;
+    border: initial;
+  }
+
+  &-list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+
+    li {
+      margin-inline: 2rem;
+    }
+  }
+
+  &-link {
+    font-family: $font-family--secondary;
+    font-size: 5rem;
+    padding: 1rem;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-color: antiquewhite;
+    }
+  }
+}
