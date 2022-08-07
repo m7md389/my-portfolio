@@ -6,14 +6,12 @@ import Landing from "../components/Landing";
 import Footer from "../components/Footer";
 import styles from "../styles/Home.module.css";
 import Hero from "../components/Hero";
+import Section from "../components/Section";
+import Skills from "../components/Skills";
+import React from "react";
 
 export default function Home() {
   const { t } = useTranslation();
-
-  const landing = {
-    heading: "Mohammad Abd Alrahman",
-    tagline: "Full Stack Developer"
-  };
 
   return (
     <div>
@@ -35,6 +33,13 @@ export default function Home() {
         description={t("about:about")}
       />
 
+      <Skills id="technical_skills" t={t} />
+
+      <Section
+        heading={t("portfolio:heading")}
+        tagline={t("portfolio:tagline")}
+      ></Section>
+
       <Footer />
     </div>
   );
@@ -43,7 +48,13 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["navbar", "landing", "about"]))
+      ...(await serverSideTranslations(locale, [
+        "navbar",
+        "landing",
+        "about",
+        "portfolio",
+        "skills"
+      ]))
     }
   };
 }

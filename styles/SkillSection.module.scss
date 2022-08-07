@@ -1,0 +1,26 @@
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 5rem;
+
+  &-heading {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2rem -2px 2rem 0;
+    flex: 1;
+  }
+
+  &-list {
+    flex: 1;
+    list-style-type: "-  ";
+    text-align: start;
+    font-size: 1.125rem;
+    padding: 0;
+  }
+
+  &-item {
+    text-transform: full-width;
+  }
+}

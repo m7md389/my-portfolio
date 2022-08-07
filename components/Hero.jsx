@@ -2,7 +2,7 @@ import heroStyles from "../styles/Hero.module.scss";
 
 export default function Hero({ id, image, heading, tagline, description }) {
   return (
-    <section className={heroStyles["hero"]} id={id}>
+    <section className={`${heroStyles["hero"]} container`} id={id}>
       <img
         src={image}
         alt="Picture of me"

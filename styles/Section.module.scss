@@ -1,0 +1,45 @@
+.section {
+  height: 100vh;
+
+  &-heading {
+    text-align: center;
+    margin-top: 10rem;
+  }
+
+  &-title {
+    color: rgba(#000, 0.3);
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+      background-color: rgba(#000, 1);
+      bottom: -0.5rem;
+      content: "";
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      border-radius: 0.8rem;
+      height: 3px;
+      width: 10rem;
+    }
+
+    &::after {
+      aspect-ratio: 1/1;
+      border-radius: 100%;
+      width: 1.5rem;
+      bottom: -1rem;
+    }
+  }
+
+  &-tagline {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+}
