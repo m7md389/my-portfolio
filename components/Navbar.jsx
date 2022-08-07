@@ -28,9 +28,7 @@ export default function Navbar({ t, isActiveToggler, handleNavItem }) {
         </li>
         <li onClick={handleNavItem}>
           <Link href="#technical_skills">
-            <a className={navbarStyles["nav-link"]}>
-              {t("navbar:technicalSkills")}
-            </a>
+            <a className={navbarStyles["nav-link"]}>{t("navbar:skills")}</a>
           </Link>
         </li>
         <li onClick={handleNavItem}>
