@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Landing from "../components/Landing";
@@ -42,18 +43,15 @@ export default function Home() {
 
       <Portfolio id="portfolio" t={t} />
 
-      <Timeline
-        t={t}
-        id={"experience"}
-        heading={t("experience:heading")}
-        tagline={t("experience:tagline")}
-      />
+      <Timeline id={"experience"} t={t} />
 
-      <Timeline
+      <Timeline id={"education"} t={t} />
+
+      <Contact
         t={t}
-        id={"education"}
-        heading={t("education:heading")}
-        tagline={t("education:tagline")}
+        id={"contact"}
+        heading={t("contact:heading")}
+        tagline={t("contact:tagline")}
       />
 
       <Footer />
@@ -71,7 +69,8 @@ export async function getStaticProps({ locale }) {
         "portfolio",
         "skills",
         "experience",
-        "education"
+        "education",
+        "contact"
       ]))
     }
   };

@@ -1,0 +1,34 @@
+.contact {
+  &-list {
+    width: 60%;
+    margin-inline: auto;
+    background-color: rgba(#000, 0.05);
+    border-radius: 0.8rem;
+    padding: 5rem 3rem;
+    text-align: start;
+  }
+
+  &-item {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: minmax(3rem, 1fr) 2.5fr;
+    align-items: center;
+    gap: 2rem;
+    margin-inline-start: 7rem;
+  }
+
+  &-item:last-child {
+    margin-bottom: 0;
+  }
+
+  &-label {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: start;
+  }
+
+  &-value {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
