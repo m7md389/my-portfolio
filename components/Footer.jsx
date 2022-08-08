@@ -3,8 +3,10 @@ import footerStyles from "../styles/Footer.module.scss";
 
 export default function Footer() {
   return (
-    <footer>
-      <h2>&copy; Mohammad Abd Alrahman - 2022</h2>
+    <footer className={footerStyles["footer"]}>
+      <h2 className={footerStyles["copy-write"]}>
+        &copy; 2022 Mohammad Abd Alrahman
+      </h2>
     </footer>
   );
 }
