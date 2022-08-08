@@ -49,6 +49,13 @@ export default function Home() {
         tagline={t("experience:tagline")}
       />
 
+      <Timeline
+        t={t}
+        id={"education"}
+        heading={t("education:heading")}
+        tagline={t("education:tagline")}
+      />
+
       <Footer />
     </div>
   );
@@ -63,7 +70,8 @@ export async function getStaticProps({ locale }) {
         "about",
         "portfolio",
         "skills",
-        "experience"
+        "experience",
+        "education"
       ]))
     }
   };
