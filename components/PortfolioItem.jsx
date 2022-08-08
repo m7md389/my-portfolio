@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link";
+import ExternalLink from "./ExternalLink";
 import portfolioItemStyles from "../styles/PortfolioItem.module.scss";
 
 export default function PortfolioItem({
@@ -21,22 +21,14 @@ export default function PortfolioItem({
         <h3 className={portfolioItemStyles["item-title"]}>{title}</h3>
         <p className={portfolioItemStyles["item-about"]}>{about}</p>
         {!isEmptyContent(websiteUrl) && (
-          <a
-            href={websiteUrl}
-            className={portfolioItemStyles["item-link"]}
-            target="_blank"
-          >
+          <ExternalLink href={websiteUrl} uppercase>
             Website
-          </a>
+          </ExternalLink>
         )}
         {!isEmptyContent(githubUrl) && (
-          <a
-            href={githubUrl}
-            className={portfolioItemStyles["item-link"]}
-            target="_blank"
-          >
+          <ExternalLink href={githubUrl} uppercase>
             Github Repository
-          </a>
+          </ExternalLink>
         )}
       </div>
     </div>

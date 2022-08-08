@@ -36,19 +36,6 @@
 
   &-about {
     font-size: 1.75rem;
-    margin-bottom: 2.5rem;
-  }
-
-  &-link {
-    display: block;
-    margin-inline-end: 2rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: #3883ff;
-    transition: color 650m;
-
-    &:hover {
-      color: #2f67cd;
-    }
+    margin-bottom: 1.5rem;
   }
 }

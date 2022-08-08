@@ -7,8 +7,8 @@ import Hero from "../components/Hero";
 import Landing from "../components/Landing";
 import Menu from "../components/Menu";
 import Portfolio from "../components/Portfolio";
-import Timeline from "../components/Timeline";
 import Skills from "../components/Skills";
+import Timeline from "../components/Timeline";
 
 export default function Home() {
   const {

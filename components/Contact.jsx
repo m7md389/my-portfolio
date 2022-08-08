@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "./Section";
 import contactStyles from "../styles/Contact.module.scss";
+import ExternalLink from "./ExternalLink";
 
 export default function Contact({ t, id, heading, tagline }) {
   const contactInfo = getContactInfo(t, id);
@@ -28,16 +29,9 @@ function getContactInfo(t, id) {
 
 function ContactValue({ data }) {
   if (["LinkedIn", "GitHub"].includes(data[0]))
-    return (
-      <a className={contactStyles["contact-value"]} href={data[1]}>
-        {data[1]}
-      </a>
-    );
+    return <ExternalLink href={data[1]}>{data[1]}</ExternalLink>;
   if (["Email"].includes(data[0]))
-    return (
-      <a className={contactStyles["contact-value"]} href={`mailto:${data[1]}`}>
-        {data[1]}
-      </a>
-    );
+    return <ExternalLink href={`mailto:${data[1]}`}>{data[1]}</ExternalLink>;
+
   return <p className={contactStyles["contact-value"]}>{data[1]}</p>;
 }
