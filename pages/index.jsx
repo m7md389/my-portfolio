@@ -1,21 +1,22 @@
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
-import Menu from "../components/Menu";
-import Landing from "../components/Landing";
 import Footer from "../components/Footer";
-import styles from "../styles/Home.module.css";
 import Hero from "../components/Hero";
-import Section from "../components/Section";
-import Skills from "../components/Skills";
-import React from "react";
+import Landing from "../components/Landing";
+import Menu from "../components/Menu";
 import Portfolio from "../components/Portfolio";
+import Timeline from "../components/Timeline";
+import Skills from "../components/Skills";
 
 export default function Home() {
-  const { t } = useTranslation();
+  const {
+    t,
+    i18n: { language }
+  } = useTranslation();
 
   return (
-    <div>
+    <div dir={getDir(language)}>
       <Head>
         <title>{t("landing:heading")}</title>
         <meta
@@ -41,6 +42,13 @@ export default function Home() {
 
       <Portfolio id="portfolio" t={t} />
 
+      <Timeline
+        t={t}
+        id={"experience"}
+        heading={t("experience:heading")}
+        tagline={t("experience:tagline")}
+      />
+
       <Footer />
     </div>
   );
@@ -54,8 +62,14 @@ export async function getStaticProps({ locale }) {
         "landing",
         "about",
         "portfolio",
-        "skills"
+        "skills",
+        "experience"
       ]))
     }
   };
+}
+
+function getDir(language) {
+  const rtlLanguages = ["he"];
+  return rtlLanguages.includes(language) ? "rtl" : "ltr";
 }

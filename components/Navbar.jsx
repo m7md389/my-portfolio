@@ -32,7 +32,7 @@ export default function Navbar({ t, isActiveToggler, handleNavItem }) {
           </Link>
         </li>
         <li onClick={handleNavItem}>
-          <Link href="#work_experience">
+          <Link href="#experience">
             <a className={navbarStyles["nav-link"]}>
               {t("navbar:workExperience")}
             </a>

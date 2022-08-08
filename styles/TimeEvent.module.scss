@@ -1,0 +1,46 @@
+.event {
+  position: relative;
+  border-bottom: 1px solid rgb(#fff, 0.1);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: attr(data-date);
+    margin-inline-start: -15.4rem;
+    text-align: start;
+    min-width: 12rem;
+    font-size: 1.5rem;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    box-shadow: 0 0 0 4px #fd57bf;
+    border-radius: 100%;
+    left: -5.9rem;
+    height: 1.5rem;
+    aspect-ratio: 1/1;
+    background-color: #fff;
+  }
+
+  &-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 1rem;
+    opacity: 0.3;
+  }
+
+  &-description {
+  }
+}

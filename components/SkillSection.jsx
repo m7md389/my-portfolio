@@ -2,7 +2,7 @@ import skillSectionStyles from "../styles/SkillSection.module.scss";
 
 export default function Title({ heading, skills }) {
   return (
-    <div className={skillSectionStyles["skills"]}>
+    <li className={skillSectionStyles["skills"]}>
       <h3 className={skillSectionStyles["skills-heading"]}>{heading}</h3>
       <ul className={skillSectionStyles["skills-list"]}>
         {skills.map((skill) => (
@@ -11,6 +11,6 @@ export default function Title({ heading, skills }) {
           </li>
         ))}
       </ul>
-    </div>
+    </li>
   );
 }

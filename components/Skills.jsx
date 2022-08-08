@@ -16,7 +16,7 @@ export default function Skills({ t, id }) {
       heading={t("skills:heading")}
       tagline={t("skills:tagline")}
     >
-      <div className={skillsStyles["skills"]}>
+      <ul className={skillsStyles["skills"]}>
         {skills.map((skill) => (
           <SkillSection
             key={skill.heading}
@@ -24,7 +24,7 @@ export default function Skills({ t, id }) {
             skills={skill.list}
           />
         ))}
-      </div>
+      </ul>
     </Section>
   );
 }
