@@ -5,7 +5,7 @@ import ExternalLink from "./ExternalLink";
 
 export default function Contact({ t, id, heading, tagline }) {
   const contactInfo = getContactInfo(t, id);
-  console.log({ id, heading, tagline });
+
   return (
     <Section id={id} heading={heading} tagline={tagline}>
       <ul className={contactStyles["contact-list"]}>
