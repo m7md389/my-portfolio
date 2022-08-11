@@ -1,0 +1,135 @@
+{
+  "locale": "en",
+  "landing": {
+    "name": "Mohammad Abd Alrahman",
+    "title": "Full Stack Developer"
+  },
+  "about": {
+    "title": "About",
+    "tagline": "Myself",
+    "image": "http://localhost:3000/images/me.png",
+    "description": "Graduated Computer Science and Minor Information Technology degree, completed a hands-on Full-Stack Bootcamp, and joined the bootcamp as a Teacher Assistant after graduating from it. Specializing in writing clean and high-quality code, using the best-suited algorithms. Highly motivated, fast learner, a team player, with a keen eye for details. Seeking a web developer position to utilize my experience and knowledge.",
+    "links": [{ "name": "GitHub", "link": "https://github.com/m7md389" }]
+  },
+  "contact": {
+    "title": "Contact",
+    "tagline": "Let's work together",
+    "phone": "+972-54-3838797",
+    "email": "m7md389@gmail.com",
+    "links": [
+      { "name": "LinkedIn", "link": "https://www.linkedin.com/in/m7md389" }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "tagline": "About my education history",
+    "education": [
+      {
+        "title": "Full Stack Web Developer",
+        "company": "Elevation",
+        "description": "An industry-based intensive 4-month coding Bootcamp that covered the entire MERN stack and beyond. Built several end-to-end projects from scratch while adhering to solid OOP principles and communicating with several external APIs.",
+        "startYear": "2021",
+        "endYear": "2022",
+        "syllabus": {
+          "name": "Syllabus",
+          "link": "https://elevation.ac/wp-content/uploads/2020/12/Full-Stack-Bootcamp-Syllabuses.pdf"
+        }
+      },
+      {
+        "title": "BSC of Computer Science and Minor Information Technology",
+        "company": "Arab American University",
+        "description": "About my education in the university study ...",
+        "startYear": "2013",
+        "endYear": "2018"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "tagline": "Past and current Jobs",
+    "jobs": [
+      {
+        "title": "Teacher Assistant",
+        "company": "ELEVATION",
+        "description": "Support teachers in implementing the curriculum for a bootcamp class with +20 students and provide one-on-one support to students during the bootcamp.",
+        "startYear": "2022",
+        "endYear": "now"
+      },
+      {
+        "title": "Computer Technician",
+        "company": "Abu Gosh Hight School",
+        "description": "Responsible for the stability of computers and network, maintenance hardware and software sides, and helping teachers and students in using PCs.",
+        "startYear": "2019",
+        "endYear": "now"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "tagline": "About my background",
+    "skills": [
+      { "name": "frameworks", "list": ["React", "MobX", "Next.js"] },
+      {
+        "name": "client Side",
+        "list": ["JavaScript (ES5/6)", "TypeScript", "jQuery", "HTML", "CSS"]
+      },
+      {
+        "name": "server Side",
+        "list": [
+          "Node.js",
+          "Express",
+          "JsonWebToken",
+          "MongoDB",
+          "Mongoose",
+          "SQL",
+          "PL-SQL",
+          "PHP"
+        ]
+      },
+      {
+        "name": "tools",
+        "list": ["Git", "Working in collaboration in Github", "Heroku"]
+      },
+      {
+        "name": "programming languages",
+        "list": [
+          "JavaScript",
+          "TypeScript",
+          "Python",
+          "PHP",
+          "C++",
+          "Java",
+          "C#"
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "tagline": "View some of my recent work",
+    "projects": [
+      {
+        "image": "https://img.freepik.com/free-vector/creative-gradient-portfolio-template_52683-79241.jpg",
+        "name": "My Portfolio",
+        "title": "Portfolio",
+        "description": "Some description about it ...",
+        "github": "https://github.com/m7md389/my-portfolio"
+      },
+      {
+        "image": "https://img.freepik.com/free-vector/creative-gradient-portfolio-template_52683-79241.jpg",
+        "name": "Halal Alaqsa",
+        "title": "About Company",
+        "description": "Some description about it ...",
+        "website": "http://www.halal-alaqsa.com",
+        "github": "https://github.com/m7md389/halal-AlAqsa"
+      },
+      {
+        "image": "https://img.freepik.com/free-vector/creative-gradient-portfolio-template_52683-79241.jpg",
+        "name": "Elevation Job Manager",
+        "title": "Data Manager",
+        "description": "Some description about it ...",
+        "github": "https://github.com/m7md389/elevation-job-manager"
+      }
+    ]
+  }
+}
