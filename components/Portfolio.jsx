@@ -2,22 +2,22 @@ import React from "react";
 import PortfolioItem from "./PortfolioItem";
 import Section from "./Section";
 
-export default function Portfolio({ t, id }) {
-  let portfolioItems = getPortfolioItems(t);
-
+export default function Portfolio({ t, id, heading, tagline, projects }) {
   return (
-    <Section
-      id={id}
-      heading={t("portfolio:heading")}
-      tagline={t("portfolio:tagline")}
-    >
+    <Section id={id} heading={heading} tagline={tagline}>
       <div>
-        {portfolioItems.map((item, index) => {
+        {projects.map((item, index) => {
           const isRightImage = index % 2 === 1;
           return (
             <PortfolioItem
               key={item.title}
               {...item}
+              name={item.name}
+              title={item.title}
+              description={item.description}
+              website={item.website}
+              github={item.github}
+              image={item.image}
               isRightImage={isRightImage}
             />
           );

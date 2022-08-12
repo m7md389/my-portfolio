@@ -1,7 +1,7 @@
 import Link from "next/link";
 import navbarStyles from "../styles/Navbar.module.scss";
 
-export default function Navbar({ t, isActiveToggler, handleNavItem }) {
+export default function Navbar({ messages, isActiveToggler, handleNavItem }) {
   function getNavClass() {
     return isActiveToggler
       ? `${navbarStyles["nav"]} ${navbarStyles["active"]}`
@@ -13,39 +13,47 @@ export default function Navbar({ t, isActiveToggler, handleNavItem }) {
       <ul className={navbarStyles["nav-list"]}>
         <li onClick={handleNavItem}>
           <Link href="">
-            <a className={navbarStyles["nav-link"]}>{t("navbar:home")}</a>
+            <a className={navbarStyles["nav-link"]}>{messages.landing.title}</a>
           </Link>
         </li>
         <li onClick={handleNavItem}>
-          <Link href="#about">
-            <a className={navbarStyles["nav-link"]}>{t("navbar:about")}</a>
+          <Link href={`#${messages.about.id}`}>
+            <a className={navbarStyles["nav-link"]}>{messages.about.heading}</a>
           </Link>
         </li>
         <li onClick={handleNavItem}>
-          <Link href="#portfolio">
-            <a className={navbarStyles["nav-link"]}>{t("navbar:portfolio")}</a>
-          </Link>
-        </li>
-        <li onClick={handleNavItem}>
-          <Link href="#technical_skills">
-            <a className={navbarStyles["nav-link"]}>{t("navbar:skills")}</a>
-          </Link>
-        </li>
-        <li onClick={handleNavItem}>
-          <Link href="#experience">
+          <Link href={`#${messages.portfolio.id}`}>
             <a className={navbarStyles["nav-link"]}>
-              {t("navbar:workExperience")}
+              {messages.portfolio.heading}
             </a>
           </Link>
         </li>
         <li onClick={handleNavItem}>
-          <Link href="#education">
-            <a className={navbarStyles["nav-link"]}>{t("navbar:education")}</a>
+          <Link href={`#${messages.skills.id}`}>
+            <a className={navbarStyles["nav-link"]}>
+              {messages.skills.heading}
+            </a>
           </Link>
         </li>
         <li onClick={handleNavItem}>
-          <Link href="#contact">
-            <a className={navbarStyles["nav-link"]}>{t("navbar:contact")}</a>
+          <Link href={`#${messages.experience.id}`}>
+            <a className={navbarStyles["nav-link"]}>
+              {messages.experience.heading}
+            </a>
+          </Link>
+        </li>
+        <li onClick={handleNavItem}>
+          <Link href={`#${messages.education.id}`}>
+            <a className={navbarStyles["nav-link"]}>
+              {messages.education.heading}
+            </a>
+          </Link>
+        </li>
+        <li onClick={handleNavItem}>
+          <Link href={`#${messages.contact.id}`}>
+            <a className={navbarStyles["nav-link"]}>
+              {messages.contact.heading}
+            </a>
           </Link>
         </li>
       </ul>

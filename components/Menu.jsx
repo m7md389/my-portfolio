@@ -3,7 +3,7 @@ import { useState } from "react";
 import MenuToggler from "./MenuToggler";
 import Navbar from "./Navbar";
 
-export default function Menu({ t }) {
+export default function Menu({ messages }) {
   const [isActiveToggler, setActiveToggler] = useState(false);
 
   function handleMenuToggler() {
@@ -22,7 +22,7 @@ export default function Menu({ t }) {
       />
 
       <Navbar
-        t={t}
+        messages={messages}
         isActiveToggler={isActiveToggler}
         handleNavItem={handleNavItem}
       />

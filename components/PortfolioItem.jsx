@@ -6,8 +6,8 @@ export default function PortfolioItem({
   name,
   title,
   about,
-  websiteUrl,
-  githubUrl,
+  website,
+  github,
   image,
   isRightImage
 }) {
@@ -20,23 +20,19 @@ export default function PortfolioItem({
         <h4 className={portfolioItemStyles["item-name"]}>{name}</h4>
         <h3 className={portfolioItemStyles["item-title"]}>{title}</h3>
         <p className={portfolioItemStyles["item-about"]}>{about}</p>
-        {!isEmptyContent(websiteUrl) && (
-          <ExternalLink href={websiteUrl} uppercase>
-            Website
+        {website && (
+          <ExternalLink href={website.link} uppercase>
+            {website.name}
           </ExternalLink>
         )}
-        {!isEmptyContent(githubUrl) && (
-          <ExternalLink href={githubUrl} uppercase>
-            Github Repository
+        {github && (
+          <ExternalLink href={github.link} uppercase>
+            {github.name}
           </ExternalLink>
         )}
       </div>
     </div>
   );
-}
-
-function isEmptyContent(str) {
-  return str === "000";
 }
 
 function getImageClass(isRightImage) {

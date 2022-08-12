@@ -1,6 +1,8 @@
 import Head from "next/head";
+import { useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
+import { getMessages, getDir } from "./../services/MessagesService";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
@@ -11,50 +13,72 @@ import Skills from "../components/Skills";
 import Timeline from "../components/Timeline";
 
 export default function Home() {
-  const {
-    t,
-    i18n: { language }
-  } = useTranslation();
+  const { i18n } = useTranslation();
+
+  const [messages, setMessages] = useState(getMessages(i18n.language));
 
   return (
-    <div dir={getDir(language)}>
+    <div dir={getDir(i18n.language)}>
       <Head>
-        <title>{t("landing:heading")}</title>
-        <meta
-          name="description"
-          content="Mohammad Abd Alrahman's portfolio, created by himself!"
-        />
+        <title>{messages.head.title}</title>
+        <meta name="description" content={messages.head.description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Menu t={t} />
+      <Menu messages={messages} />
 
-      <Landing heading={t("landing:heading")} tagline={t("landing:tagline")} />
+      <Landing
+        heading={messages.landing.name}
+        tagline={messages.landing.tagline}
+      />
 
       <Hero
-        id="about"
-        image={"/images/me.png"}
-        heading={t("about:heading")}
-        tagline={t("about:tagline")}
-        description={t("about:about")}
+        id={messages.about.id}
+        heading={messages.about.heading}
+        tagline={messages.about.tagline}
+        description={messages.about.description}
+        links={messages.about.links}
+        image={messages.about.image}
       />
 
-      <Skills id="technical_skills" t={t} />
+      <Skills
+        id={messages.skills.id}
+        heading={messages.skills.heading}
+        tagline={messages.skills.tagline}
+        skills={messages.skills.skills}
+      />
 
-      <Portfolio id="portfolio" t={t} />
+      <Portfolio
+        id={messages.portfolio.id}
+        heading={messages.portfolio.heading}
+        tagline={messages.portfolio.tagline}
+        projects={messages.portfolio.projects}
+      />
 
-      <Timeline id={"experience"} t={t} />
+      <Timeline
+        id={messages.experience.id}
+        heading={messages.experience.heading}
+        tagline={messages.experience.tagline}
+        timelineEvents={messages.experience.events}
+      />
 
-      <Timeline id={"education"} t={t} />
+      <Timeline
+        id={messages.education.id}
+        heading={messages.education.heading}
+        tagline={messages.education.tagline}
+        timelineEvents={messages.education.events}
+      />
 
       <Contact
-        t={t}
-        id={"contact"}
-        heading={t("contact:heading")}
-        tagline={t("contact:tagline")}
+        id={messages.contact.id}
+        heading={messages.contact.heading}
+        tagline={messages.contact.tagline}
+        phone={messages.contact.phone}
+        email={messages.contact.email}
+        links={messages.contact.links}
       />
 
-      <Footer />
+      <Footer copyright={messages.footer.copyright} />
     </div>
   );
 }
@@ -62,21 +86,7 @@ export default function Home() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
-        "navbar",
-        "landing",
-        "about",
-        "portfolio",
-        "skills",
-        "experience",
-        "education",
-        "contact"
-      ]))
+      ...(await serverSideTranslations(locale, []))
     }
   };
-}
-
-function getDir(language) {
-  const rtlLanguages = ["he"];
-  return rtlLanguages.includes(language) ? "rtl" : "ltr";
 }
