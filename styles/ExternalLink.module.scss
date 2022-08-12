@@ -1,11 +1,13 @@
+@use "./abstracts" as *;
+
 .external-link {
+  color: $color--external-link;
   display: block;
-  font-size: 1.5rem;
-  color: #3883ff;
-  transition: color 650m;
+  font-size: $font-size--external-link;
   margin-bottom: 0.25rem;
+  transition: color 650m;
 
   &:hover {
-    color: #2f67cd;
+    color: $color--external-link-hover;
   }
 }

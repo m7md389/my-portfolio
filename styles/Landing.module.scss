@@ -1,26 +1,26 @@
 @use "./abstracts" as *;
 
 .landing {
-  height: 100vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: center;
-  align-items: center;
-  width: 100%;
   text-align: center;
+  width: 100%;
 
   &-heading {
-    font-size: 10rem;
-    font-family: $font-family--secondary;
-    padding: 3rem;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-color: #000;
+    background-color: $color--landing-heading;
+    font-family: $font-family--landing-heading;
+    font-size: $font-size--landing-heading;
+    padding: 5rem;
     user-select: none;
   }
 
   &-tagline {
-    font-size: 2rem;
-    font-weight: $font-weight--text;
+    font-size: $font-size--landing-tagline;
+    font-weight: $font-weight--light;
   }
 }

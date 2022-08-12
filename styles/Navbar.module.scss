@@ -2,25 +2,25 @@
 
 .nav {
   background-color: $background-color--nav;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
   height: 100vh;
   position: fixed;
+  top: -100vh;
   transition: all 650ms cubic-bezier(1, 0, 0, 1);
   width: 100%;
-  top: -100vh;
   z-index: 75;
 
   &.active {
+    border-radius: initial;
     top: 0;
-    border: initial;
   }
 
   &-list {
     align-items: center;
     display: flex;
-    flex-direction: column;
     height: 100%;
     justify-content: center;
-    list-style: none;
     width: 100%;
 
     li {
@@ -29,16 +29,15 @@
   }
 
   &-link {
-    font-family: $font-family--secondary;
-    font-size: 5rem;
+    font-family: $font-family--nav-link;
+    font-size: $font-size--nav-link;
     padding: 1rem;
-    color: #fff;
 
     &:hover,
     &:focus {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-color: antiquewhite;
+      background-color: $color--nav-link--hover;
     }
   }
 }

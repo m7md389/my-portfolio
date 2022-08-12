@@ -1,24 +1,26 @@
+@use "./abstracts" as *;
+
 .skills {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 2rem;
+  display: flex;
   gap: 5rem;
+  justify-content: center;
+  padding: 2rem;
 
   &-heading {
-    text-transform: uppercase;
+    flex: 1;
+    font-size: $font-size--skill-heading;
     letter-spacing: 2px;
     margin: 2rem -2px 2rem 0;
-    flex: 1;
-    font-size: 1.5rem;
+    text-transform: uppercase;
   }
 
   &-list {
     flex: 1;
+    font-size: $font-size--skill-list;
     list-style-type: "-  ";
-    text-align: start;
-    font-size: 1.125rem;
     padding: 0;
+    text-align: start;
   }
 
   &-item {

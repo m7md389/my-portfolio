@@ -1,6 +1,32 @@
+// CONSTANTS
 $primary-color: #000;
-$secondary-color: rgb(120, 148, 223);
+$secondary-color: #eee;
 
-$color--text-primary: $secondary-color;
+// GLOBAL
+$color--primary: $secondary-color;
+$background-color: #333362;
 
+// NAV
+$color--nav-link--hover: red;
 $background-color--nav: #16162d;
+$background-color--menu-toggler-bar: rgb(30, 156, 210);
+
+// LANDING
+$color--landing-heading: rgb(30, 156, 210);
+$color--timeline-border: rgb(#fff, 0.1);
+
+// TIMELINE
+$background-color--timeline: rgba(#000, 0.05);
+$border-color--timeline-dot: #fd57bf;
+$background-color--timeline-dot: #fff;
+
+// CONTACT
+$background-color--contact-list: rgba(#000, 0.05);
+
+// SECTION
+$color--section-title: rgba($primary-color, 0.3);
+$background-color--section-separator-line: rgba($primary-color, 1);
+
+// EXTERNAL LINK
+$color--external-link: #3883ff;
+$color--external-link-hover: #2f67cd;

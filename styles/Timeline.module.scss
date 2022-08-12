@@ -1,10 +1,12 @@
+@use "./abstracts" as *;
+
 .timeline {
+  background-color: $background-color--timeline;
   border-inline-start: 4px solid #ffe838;
   border-radius: 0.8rem;
-  background-color: rgba(#000, 0.05);
   margin-inline: auto;
-  position: relative;
   padding: 5rem;
+  position: relative;
   text-align: start;
   width: 70%;
 }

@@ -1,6 +1,8 @@
+@use "./abstracts" as *;
+
 .event {
   position: relative;
-  border-bottom: 1px solid rgb(#fff, 0.1);
+  border-bottom: 1px solid $color--timeline-border;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   display: flex;
@@ -19,24 +21,24 @@
     margin-inline-start: -15.4rem;
     text-align: start;
     min-width: 12rem;
-    font-size: 1.5rem;
+    font-size: $font-size--timeline-date;
   }
 
   &::after {
     position: absolute;
     content: "";
-    box-shadow: 0 0 0 4px #fd57bf;
+    box-shadow: 0 0 0 4px $border-color--timeline-dot;
     border-radius: 100%;
     margin-inline-start: -6rem;
     height: 1.5rem;
     aspect-ratio: 1/1;
-    background-color: #fff;
+    background-color: $background-color--timeline-dot;
   }
 
   &-title {
-    font-size: 2rem;
+    font-size: $font-size--timeline-title;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: $font-weight--light;
     margin-top: 1rem;
     opacity: 0.3;
   }
@@ -44,13 +46,13 @@
   &-company {
     @extend .event-title;
     margin-block: 0.125rem 0.25rem;
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: $font-size--timeline-company;
+    font-weight: $font-weight--light;
     opacity: 0.6;
   }
 
   &-description {
-    font-size: 1.5rem;
+    font-size: $font-size--timeline-description;
     text-indent: 2rem;
   }
 }

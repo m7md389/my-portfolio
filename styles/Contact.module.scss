@@ -1,19 +1,21 @@
+@use "./abstracts" as *;
+
 .contact {
   &-list {
-    width: 60%;
-    margin-inline: auto;
-    background-color: rgba(#000, 0.05);
+    background-color: $background-color--contact-list;
     border-radius: 0.8rem;
+    margin-inline: auto;
     padding: 5rem 3rem;
     text-align: start;
+    width: 60%;
   }
 
   &-item {
-    margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: minmax(3rem, 1fr) 2.5fr;
     align-items: center;
+    display: grid;
     gap: 2rem;
+    grid-template-columns: minmax(3rem, 1fr) 2.5fr;
+    margin-bottom: 2rem;
     margin-inline-start: 7rem;
   }
 
@@ -22,13 +24,13 @@
   }
 
   &-label {
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: $font-size--contact-label;
+    font-weight: $font-weight--light;
     text-align: start;
   }
 
   &-value {
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 1$font-size--contact-value;
+    font-weight: $font-weight--light;
   }
 }

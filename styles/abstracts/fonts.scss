@@ -1,21 +1,68 @@
+// DECLARE FONTS
 @font-face {
   font-family: "The Historia Demo";
   src: url("/fonts/TheHistoriaDemo.ttf");
 }
 
+// CONSTANTS
 $font-family--primary: "Roboto", sans-serif;
 $font-family--secondary: "The Historia Demo", sans-serif;
 
-$font-size--x-small: 1.3rem;
-$font-size--small: 1.6rem;
-$font-size--medium: 2rem;
-$font-size--medium-large: 2.8rem;
-$font-size--large: 3.6rem;
-$font-size--x-large: 4.2rem;
-$font-size--xx-large: 7.2rem;
+$font-size--xx-small: 1.2rem;
+$font-size--x-small: 1.5rem;
+$font-size--small: 1.8rem;
+
+$font-size--medium-smaller: 2rem;
+$font-size--medium: 3rem;
+
+$font-size--large: 3.5rem;
+$font-size--x-large: 5rem;
+$font-size--xx-large: 10rem;
+$font-size--xxx-large: 20rem;
 
 $font-weight--light: 300;
 
-$font-size--text: $font-size--medium;
+// GLOBAL
+$font-size--paragraph: $font-size--small;
 
-$font-weight--text: $font-weight--light;
+// NAV
+$font-family--nav-link: $font-family--secondary;
+$font-size--nav-link: $font-size--x-large;
+
+// LANDING
+$font-size--landing-heading: $font-size--xxx-large;
+$font-size--landing-tagline: $font-size--medium-smaller;
+$font-family--landing-heading: $font-family--secondary;
+
+// ABOUT
+$font-size--about-heading: $font-size--xx-large;
+$font-size--about-tagline: $font-size--medium-smaller;
+
+// SKILLS
+$font-size--skill-heading: $font-size--small;
+$font-size--skill-list: $font-size--xx-small;
+
+// PORTFOLIO
+$font-size--project-name: $font-size--medium-smaller;
+$font-size--project-title: $font-size--x-large;
+$font-size--project-about: $font-size--small;
+
+// TIMELINE
+$font-size--timeline-date: $font-size--x-small;
+$font-size--timeline-title: $font-size--medium-smaller;
+$font-size--timeline-company: $font-size--x-small;
+$font-size--timeline-description: $font-size--x-small;
+
+// CONTACT
+$font-size--contact-label: $font-size--xx-small;
+$font-size--contact-value: $font-size--x-small;
+
+// FOOTER
+$font-size--footer-copyright: $font-size--x-small;
+
+// SECTION
+$font-size--section-title: $font-size--large;
+$font-size--section-tagline: $font-size--small;
+
+// EXTERNAL LINK
+$font-size--external-link: $font-size--x-small;

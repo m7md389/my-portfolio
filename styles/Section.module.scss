@@ -1,20 +1,22 @@
+@use "./abstracts" as *;
+
 .section {
   &-heading {
-    text-align: center;
     margin-bottom: 10rem;
+    text-align: center;
   }
 
   &-title {
-    color: rgba(#000, 0.3);
-    font-size: 3.5rem;
-    font-weight: 300;
+    color: $color--section-title;
+    font-size: $font-size--section-title;
+    font-weight: $font-weight--light;
     margin-bottom: 1rem;
     position: relative;
     text-transform: uppercase;
 
     &::before,
     &::after {
-      background-color: rgba(#000, 1);
+      background-color: $background-color--section-separator-line;
       bottom: -0.5rem;
       content: "";
       left: 50%;
@@ -31,13 +33,13 @@
     &::after {
       aspect-ratio: 1/1;
       border-radius: 100%;
-      width: 1.5rem;
       bottom: -1rem;
+      width: 1.5rem;
     }
   }
 
   &-tagline {
-    font-size: 1.6rem;
-    font-weight: 300;
+    font-size: $font-size--section-tagline;
+    font-weight: $font-weight--light;
   }
 }

@@ -1,20 +1,22 @@
+@use "./abstracts" as *;
+
 .menu-toggler {
+  aspect-ratio: 1/1;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 4rem;
+  height: 5rem;
+  justify-content: space-around;
   left: 5rem;
-  top: 5rem;
   position: fixed;
-  width: 5rem;
-  cursor: pointer;
-  justify-content: space-between;
+  top: 5rem;
   z-index: 100;
 
   .bar {
+    background-color: $background-color--menu-toggler-bar;
+    border-radius: 0.8rem;
     height: 5px;
     width: 100%;
-    background-color: aqua;
-    border-radius: 0.8rem;
 
     &.half {
       width: 50%;

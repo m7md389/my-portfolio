@@ -1,9 +1,11 @@
-.item {
-  display: flex;
+@use "./abstracts" as *;
+
+.project {
   align-items: center;
+  display: flex;
+  gap: 5rem;
   justify-content: center;
   margin-bottom: 5rem;
-  gap: 5rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -22,20 +24,20 @@
   }
 
   &-name {
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 300;
+    font-size: $font-size--project-name;
+    font-weight: $font-weight--light;
     opacity: 0.3;
+    text-transform: uppercase;
   }
 
   &-title {
-    font-size: 3rem;
-    font-weight: 300;
+    font-size: $font-size--project-title;
+    font-weight: $font-weight--light;
     margin-block: 1rem;
   }
 
   &-about {
-    font-size: 1.75rem;
+    font-size: $font-size--project-about;
     margin-bottom: 1.5rem;
   }
 }

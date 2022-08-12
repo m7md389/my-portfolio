@@ -1,9 +1,11 @@
+@use "./abstracts" as *;
+
 .footer {
   &-copyright {
-    width: 100%;
-    text-align: center;
     background-color: #16162d;
+    font-size: $font-size--footer-copyright;
     padding-block: 3rem;
-    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
   }
 }

@@ -1,4 +1,6 @@
-.hero {
+@use "./abstracts" as *;
+
+.about {
   align-items: center;
   display: flex;
   gap: 2rem;
@@ -21,13 +23,13 @@
     line-height: 0;
 
     & h2 {
-      font-size: 10rem;
+      font-size: $font-size--about-heading;
       opacity: 0.3;
     }
 
     & p {
-      font-size: 2rem;
-      font-weight: 300;
+      font-size: $font-size--about-tagline;
+      font-weight: $font-weight--light;
     }
   }
 
