@@ -3,19 +3,19 @@ import { useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { getMessages, getDir } from "./../services/MessagesService";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import Hero from "../components/Hero";
-import Landing from "../components/Landing";
-import Menu from "../components/Menu";
-import Portfolio from "../components/Portfolio";
-import Skills from "../components/Skills";
-import Timeline from "../components/Timeline";
+import Contact from "../components/sections/Contact";
+import Footer from "../components/sections/Footer";
+import About from "../components/sections/About";
+import Landing from "../components/sections/Landing";
+import Menu from "../components/sections/Menu";
+import Portfolio from "../components/sections/Portfolio";
+import Skills from "../components/sections/Skills";
+import Timeline from "../components/sections/Timeline";
 
 export default function Home() {
   const { i18n } = useTranslation();
 
-  const [messages, setMessages] = useState(getMessages(i18n.language));
+  const [messages] = useState(getMessages(i18n.language));
 
   return (
     <div dir={getDir(i18n.language)}>
@@ -32,7 +32,7 @@ export default function Home() {
         tagline={messages.landing.tagline}
       />
 
-      <Hero
+      <About
         id={messages.about.id}
         heading={messages.about.heading}
         tagline={messages.about.tagline}

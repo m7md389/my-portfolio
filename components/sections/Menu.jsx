@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { useState } from "react";
-import MenuToggler from "./MenuToggler";
-import Navbar from "./Navbar";
+import MenuToggler from "../MenuToggler";
+import Navbar from "../Navbar";
 
 export default function Menu({ messages }) {
   const [isActiveToggler, setActiveToggler] = useState(false);
