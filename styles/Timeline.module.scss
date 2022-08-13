@@ -2,7 +2,7 @@
 
 .timeline {
   background-color: $background-color--timeline;
-  border-inline-start: 4px solid #ffe838;
+  border-inline-start: 4px solid $border-color--timeline;
   border-radius: 0.8rem;
   margin-inline: auto;
   padding: 5rem;

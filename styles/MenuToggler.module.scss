@@ -12,6 +12,12 @@
   top: 5rem;
   z-index: 100;
 
+  &:hover {
+    .bar {
+      background-color: $background-color--menu-toggler--hover;
+    }
+  }
+
   .bar {
     background-color: $background-color--menu-toggler-bar;
     border-radius: 0.8rem;

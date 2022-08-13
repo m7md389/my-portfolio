@@ -1,32 +1,39 @@
 // CONSTANTS
-$secondary-color: #eee;
+$secondary-color: #f2ebe9;
 $white-color: #fff;
+$black-color: #000;
 
 // GLOBAL
 $color--primary: $secondary-color;
-$background-color: #333362;
+$background-color: #243a73;
 
 // NAV
-$color--nav-link--hover: red;
+$color--nav-link--hover: #7c3e66;
 $background-color--nav: #16162d;
-$background-color--menu-toggler-bar: rgb(30, 156, 210);
+$background-color--menu-toggler-bar: #a5becc;
+$background-color--menu-toggler--hover: #7c3e66;
 
 // LANDING
-$color--landing-heading: rgb(30, 156, 210);
+$color--landing-heading: #a5becc;
 $color--timeline-border: rgb($white-color, 0.1);
 
 // TIMELINE
-$background-color--timeline: rgba(#000, 0.05);
-$border-color--timeline-dot: #fd57bf;
 $background-color--timeline-dot: $white-color;
+$background-color--timeline: rgba($black-color, 0.05);
+$border-color--timeline-dot: #fd57bf;
+$border-color--timeline: #a5becc;
+// $border-color--timeline: #ffe838;
 
 // CONTACT
-$background-color--contact-list: rgba(#000, 0.05);
+$background-color--contact-list: rgba($black-color, 0.05);
+
+// FOOTER
+$background-color--footer: #0f214f;
 
 // SECTION
 $color--section-title: rgba($white-color, 0.3);
 $background-color--section-separator-line: rgba($white-color, 0.75);
 
 // EXTERNAL LINK
-$color--external-link: #3883ff;
-$color--external-link-hover: #2f67cd;
+$color--external-link: #a5becc;
+$color--external-link-hover: #d2e2ec;
