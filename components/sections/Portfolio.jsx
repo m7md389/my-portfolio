@@ -2,9 +2,20 @@ import React from "react";
 import Project from "../Project";
 import Section from "../Section";
 
-export default function Portfolio({ id, heading, tagline, projects }) {
+export default function Portfolio({
+  setSectionRef,
+  id,
+  heading,
+  tagline,
+  projects
+}) {
   return (
-    <Section id={id} heading={heading} tagline={tagline}>
+    <Section
+      setSectionRef={setSectionRef}
+      id={id}
+      heading={heading}
+      tagline={tagline}
+    >
       <div>
         {projects.map((item, index) => {
           const isRightImage = index % 2 === 1;

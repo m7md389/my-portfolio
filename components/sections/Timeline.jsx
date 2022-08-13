@@ -3,9 +3,20 @@ import Section from "../Section";
 import TimeEvent from "../TimeEvent";
 import timelineStyles from "../../styles/Timeline.module.scss";
 
-export default function Timeline({ id, heading, tagline, timelineEvents }) {
+export default function Timeline({
+  setSectionRef,
+  id,
+  heading,
+  tagline,
+  timelineEvents
+}) {
   return (
-    <Section id={id} heading={heading} tagline={tagline}>
+    <Section
+      setSectionRef={setSectionRef}
+      id={id}
+      heading={heading}
+      tagline={tagline}
+    >
       <ul className={timelineStyles["timeline"]}>
         {timelineEvents.map((event) => (
           <TimeEvent

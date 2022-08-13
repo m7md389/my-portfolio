@@ -2,15 +2,16 @@ import { useState } from "react";
 import MenuToggler from "../MenuToggler";
 import Navbar from "../Navbar";
 
-export default function Menu({ messages }) {
+export default function Menu({ _handleNavigate, messages }) {
   const [isActiveToggler, setActiveToggler] = useState(false);
 
   function handleMenuToggler() {
     setActiveToggler(!isActiveToggler);
   }
 
-  function handleNavItem() {
+  function handleNavigate(section) {
     setActiveToggler(false);
+    _handleNavigate(section);
   }
 
   return (
@@ -21,9 +22,9 @@ export default function Menu({ messages }) {
       />
 
       <Navbar
+        handleNavigate={handleNavigate}
         messages={messages}
         isActiveToggler={isActiveToggler}
-        handleNavItem={handleNavItem}
       />
     </header>
   );

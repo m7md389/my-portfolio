@@ -1,22 +1,40 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { getMessages, getDir } from "./../services/MessagesService";
+import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/sections/Footer";
-import About from "../components/sections/About";
 import Landing from "../components/sections/Landing";
 import Menu from "../components/sections/Menu";
 import Portfolio from "../components/sections/Portfolio";
 import Skills from "../components/sections/Skills";
 import Timeline from "../components/sections/Timeline";
+import homeStyles from "../styles/Home.module.scss";
 
 export default function Home() {
   const { i18n } = useTranslation();
-
   const [messages] = useState(getMessages(i18n.language));
 
+  const sectionsRef = {};
+  const setSectionRef = (sectionName, sectionRef) => {
+    sectionsRef[sectionName] = sectionRef;
+  };
+  const [currentSection, setCurrentSection] = useState(null);
+
+  useEffect(() => {
+    setCurrentSection(sectionsRef[messages.landing.id]);
+  }, []);
+  useEffect(() => {
+    if (currentSection) {
+      currentSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [currentSection]);
+
+  const handleNavigate = (section) => {
+    setCurrentSection(sectionsRef[section]);
+  };
   return (
     <div dir={getDir(i18n.language)}>
       <Head>
@@ -25,15 +43,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Menu messages={messages} />
+      <Menu
+        setCurrentSection={setCurrentSection}
+        messages={messages}
+        _handleNavigate={handleNavigate}
+      />
 
       <Landing
+        id={messages.landing.id}
+        setSectionRef={setSectionRef}
         heading={messages.landing.name}
         tagline={messages.landing.tagline}
       />
 
       <About
         id={messages.about.id}
+        setSectionRef={setSectionRef}
         heading={messages.about.heading}
         tagline={messages.about.tagline}
         description={messages.about.description}
@@ -43,6 +68,7 @@ export default function Home() {
 
       <Skills
         id={messages.skills.id}
+        setSectionRef={setSectionRef}
         heading={messages.skills.heading}
         tagline={messages.skills.tagline}
         skills={messages.skills.skills}
@@ -50,6 +76,7 @@ export default function Home() {
 
       <Portfolio
         id={messages.portfolio.id}
+        setSectionRef={setSectionRef}
         heading={messages.portfolio.heading}
         tagline={messages.portfolio.tagline}
         projects={messages.portfolio.projects}
@@ -57,6 +84,7 @@ export default function Home() {
 
       <Timeline
         id={messages.experience.id}
+        setSectionRef={setSectionRef}
         heading={messages.experience.heading}
         tagline={messages.experience.tagline}
         timelineEvents={messages.experience.events}
@@ -64,6 +92,7 @@ export default function Home() {
 
       <Timeline
         id={messages.education.id}
+        setSectionRef={setSectionRef}
         heading={messages.education.heading}
         tagline={messages.education.tagline}
         timelineEvents={messages.education.events}
@@ -71,6 +100,7 @@ export default function Home() {
 
       <Contact
         id={messages.contact.id}
+        setSectionRef={setSectionRef}
         heading={messages.contact.heading}
         tagline={messages.contact.tagline}
         phone={messages.contact.phone}
@@ -78,7 +108,10 @@ export default function Home() {
         links={messages.contact.links}
       />
 
-      <Footer copyright={messages.footer.copyright} />
+      <Footer
+        setSectionRef={setSectionRef}
+        copyright={messages.footer.copyright}
+      />
     </div>
   );
 }

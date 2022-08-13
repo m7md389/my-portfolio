@@ -1,7 +1,7 @@
 import Link from "next/link";
 import navbarStyles from "../styles/Navbar.module.scss";
 
-export default function Navbar({ messages, isActiveToggler, handleNavItem }) {
+export default function Navbar({ messages, handleNavigate, isActiveToggler }) {
   function getNavClass() {
     return isActiveToggler
       ? `${navbarStyles["nav"]} ${navbarStyles["active"]}`
@@ -11,50 +11,32 @@ export default function Navbar({ messages, isActiveToggler, handleNavItem }) {
   return (
     <nav className={getNavClass()}>
       <ul className={navbarStyles["nav-list"]}>
-        <li onClick={handleNavItem}>
-          <Link href="">
-            <a className={navbarStyles["nav-link"]}>{messages.landing.title}</a>
-          </Link>
+        <li onClick={() => handleNavigate(messages.landing.id)}>
+          <p className={navbarStyles["nav-link"]}>{messages.landing.title}</p>
         </li>
-        <li onClick={handleNavItem}>
-          <Link href={`#${messages.about.id}`}>
-            <a className={navbarStyles["nav-link"]}>{messages.about.heading}</a>
-          </Link>
+        <li onClick={() => handleNavigate(messages.about.id)}>
+          <p className={navbarStyles["nav-link"]}>{messages.about.heading}</p>
         </li>
-        <li onClick={handleNavItem}>
-          <Link href={`#${messages.portfolio.id}`}>
-            <a className={navbarStyles["nav-link"]}>
-              {messages.portfolio.heading}
-            </a>
-          </Link>
+        <li onClick={() => handleNavigate(messages.portfolio.id)}>
+          <p className={navbarStyles["nav-link"]}>
+            {messages.portfolio.heading}
+          </p>
         </li>
-        <li onClick={handleNavItem}>
-          <Link href={`#${messages.skills.id}`}>
-            <a className={navbarStyles["nav-link"]}>
-              {messages.skills.heading}
-            </a>
-          </Link>
+        <li onClick={() => handleNavigate(messages.skills.id)}>
+          <p className={navbarStyles["nav-link"]}>{messages.skills.heading}</p>
         </li>
-        <li onClick={handleNavItem}>
-          <Link href={`#${messages.experience.id}`}>
-            <a className={navbarStyles["nav-link"]}>
-              {messages.experience.heading}
-            </a>
-          </Link>
+        <li onClick={() => handleNavigate(messages.experience.id)}>
+          <p className={navbarStyles["nav-link"]}>
+            {messages.experience.heading}
+          </p>
         </li>
-        <li onClick={handleNavItem}>
-          <Link href={`#${messages.education.id}`}>
-            <a className={navbarStyles["nav-link"]}>
-              {messages.education.heading}
-            </a>
-          </Link>
+        <li onClick={() => handleNavigate(messages.education.id)}>
+          <p className={navbarStyles["nav-link"]}>
+            {messages.education.heading}
+          </p>
         </li>
-        <li onClick={handleNavItem}>
-          <Link href={`#${messages.contact.id}`}>
-            <a className={navbarStyles["nav-link"]}>
-              {messages.contact.heading}
-            </a>
-          </Link>
+        <li onClick={() => handleNavigate(messages.contact.id)}>
+          <p className={navbarStyles["nav-link"]}>{messages.contact.heading}</p>
         </li>
       </ul>
     </nav>

@@ -1,8 +1,19 @@
 import aboutStyles from "../../styles/About.module.scss";
 
-export default function About({ id, image, heading, tagline, description }) {
+export default function About({
+  setSectionRef,
+  id,
+  image,
+  heading,
+  tagline,
+  description
+}) {
   return (
-    <section className={`${aboutStyles["about"]} container`} id={id}>
+    <section
+      ref={(el) => setSectionRef(id, el)}
+      className={`${aboutStyles["about"]} container`}
+      id={id}
+    >
       <img
         src={image}
         alt="Picture of me"

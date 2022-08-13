@@ -3,9 +3,22 @@ import Section from "../Section";
 import contactStyles from "../../styles/Contact.module.scss";
 import ExternalLink from "../ExternalLink";
 
-export default function Contact({ id, heading, tagline, phone, email, links }) {
+export default function Contact({
+  setSectionRef,
+  id,
+  heading,
+  tagline,
+  phone,
+  email,
+  links
+}) {
   return (
-    <Section id={id} heading={heading} tagline={tagline}>
+    <Section
+      setSectionRef={setSectionRef}
+      id={id}
+      heading={heading}
+      tagline={tagline}
+    >
       <ul className={contactStyles["contact-list"]}>
         <li className={contactStyles["contact-item"]}>
           <h3 className={contactStyles["contact-label"]}>{phone.name}</h3>
