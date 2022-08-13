@@ -27,7 +27,7 @@ export default function Contact({
       >
         <li className={contactStyles["contact-item"]}>
           <h3 className={contactStyles["contact-label"]}>{phone.name}</h3>
-          <ExternalLink href={phone.value}>{phone.value}</ExternalLink>
+          <ExternalLink>{phone.value}</ExternalLink>
         </li>
         <li className={contactStyles["contact-item"]}>
           <h3 className={contactStyles["contact-label"]}>{email.name}</h3>
@@ -38,7 +38,9 @@ export default function Contact({
         {links.map((link) => (
           <li key={link.name} className={contactStyles["contact-item"]}>
             <h3 className={contactStyles["contact-label"]}>{link.name}</h3>
-            <ExternalLink href={link.value}>{link.value}</ExternalLink>
+            <ExternalLink href={link.value}>
+              {/\/\/(.+)/.exec(link.value)[1]}
+            </ExternalLink>
           </li>
         ))}
       </ul>

@@ -20,11 +20,11 @@
         "heading": "Contact",
         "tagline": "Let's work together",
         "phone": {
-          "name": "phone",
-          "value": "+972-54-3838797"
+          "name": "Phone",
+          "value": "+972 54-3838797"
         },
         "email": {
-          "name": "email",
+          "name": "Email",
           "value": "m7md389@gmail.com"
         },
         "links": [
@@ -199,11 +199,11 @@
         "heading": "Contact",
         "tagline": "Let's work together",
         "phone": {
-          "name": "phone",
-          "value": "+972-54-3838797"
+          "name": "Phone",
+          "value": "+972 54-3838797"
         },
         "email": {
-          "name": "email",
+          "name": "Email",
           "value": "m7md389@gmail.com"
         },
         "links": [

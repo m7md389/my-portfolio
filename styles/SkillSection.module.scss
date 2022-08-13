@@ -3,12 +3,11 @@
 .skills {
   align-items: center;
   display: flex;
-  gap: 5rem;
+  flex-direction: column;
   justify-content: center;
   padding: 2rem;
 
   &-heading {
-    flex: 1;
     font-size: $font-size--skill-heading;
     letter-spacing: 2px;
     margin: 2rem -2px 2rem 0;
@@ -16,10 +15,9 @@
   }
 
   &-list {
-    flex: 1;
     font-size: $font-size--skill-list;
     list-style-type: "-  ";
-    padding: 0;
+    padding-inline: 25%;
     text-align: start;
   }
 

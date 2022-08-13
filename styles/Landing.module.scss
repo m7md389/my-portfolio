@@ -8,11 +8,12 @@
   justify-content: center;
   text-align: center;
   width: 100%;
+  z-index: 20;
 
   &-heading {
+    background: $color--landing-heading;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-color: $color--landing-heading;
     font-family: $font-family--landing-heading;
     font-size: $font-size--landing-heading;
     padding: 5rem;

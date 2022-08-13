@@ -12,25 +12,30 @@
 
   &-item {
     align-items: center;
+    border-bottom: 1px solid $color--timeline-border;
     display: grid;
     gap: 2rem;
     grid-template-columns: minmax(3rem, 1fr) 2.5fr;
-    margin-bottom: 2rem;
-    margin-inline-start: 7rem;
-  }
+    margin-bottom: 1.5rem;
+    margin-inline: 7rem;
+    padding-bottom: 1.5rem;
 
-  &-item:last-child {
-    margin-bottom: 0;
+    &:last-of-type {
+      border: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
   }
 
   &-label {
     font-size: $font-size--contact-label;
     font-weight: $font-weight--light;
+    margin-inline-start: 1rem;
     text-align: start;
   }
 
   &-value {
-    font-size: 1$font-size--contact-value;
+    font-size: $font-size--contact-value;
     font-weight: $font-weight--light;
   }
 }

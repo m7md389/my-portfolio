@@ -24,7 +24,7 @@ export default function Home() {
   const [currentSection, setCurrentSection] = useState(null);
 
   useEffect(() => {
-    setCurrentSection(sectionsRef[messages.landing.id]);
+    // setCurrentSection(sectionsRef[messages.landing.id]);
   }, []);
   useEffect(() => {
     if (currentSection) {
