@@ -3,20 +3,30 @@ import ExternalLink from "./ExternalLink";
 import projectStyles from "../styles/Project.module.scss";
 
 export default function Project({
-  name,
-  title,
   about,
-  website,
+  animateDelay,
   github,
   image,
-  isRightImage
+  INITIAL_ANIMATE_DELAY,
+  isRightImage,
+  name,
+  title,
+  website
 }) {
   return (
     <div className={projectStyles["project"]}>
-      <div className={getImageClass(isRightImage)}>
+      <div
+        className={getImageClass(isRightImage)}
+        data-aos-delay={animateDelay}
+        data-aos={isRightImage ? "fade-right" : "fade-left"}
+      >
         <img src={image} alt={`Picture of ${title} website`} />
       </div>
-      <div className={projectStyles["project-description"]}>
+      <div
+        className={projectStyles["project-description"]}
+        data-aos-delay={animateDelay + INITIAL_ANIMATE_DELAY}
+        data-aos={isRightImage ? "fade-left" : "fade-right"}
+      >
         <h4 className={projectStyles["project-name"]}>{name}</h4>
         <h3 className={projectStyles["project-title"]}>{title}</h3>
         <p className={projectStyles["project-about"]}>{about}</p>

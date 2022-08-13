@@ -11,9 +11,9 @@ import Menu from "../components/sections/Menu";
 import Portfolio from "../components/sections/Portfolio";
 import Skills from "../components/sections/Skills";
 import Timeline from "../components/sections/Timeline";
-import homeStyles from "../styles/Home.module.scss";
 
 export default function Home() {
+  const INITIAL_ANIMATE_DELAY = 300;
   const { i18n } = useTranslation();
   const [messages] = useState(getMessages(i18n.language));
 
@@ -57,6 +57,7 @@ export default function Home() {
       />
 
       <About
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
         id={messages.about.id}
         setSectionRef={setSectionRef}
         heading={messages.about.heading}
@@ -67,6 +68,7 @@ export default function Home() {
       />
 
       <Skills
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
         id={messages.skills.id}
         setSectionRef={setSectionRef}
         heading={messages.skills.heading}
@@ -75,6 +77,7 @@ export default function Home() {
       />
 
       <Portfolio
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
         id={messages.portfolio.id}
         setSectionRef={setSectionRef}
         heading={messages.portfolio.heading}
@@ -83,6 +86,7 @@ export default function Home() {
       />
 
       <Timeline
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
         id={messages.experience.id}
         setSectionRef={setSectionRef}
         heading={messages.experience.heading}
@@ -91,6 +95,7 @@ export default function Home() {
       />
 
       <Timeline
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
         id={messages.education.id}
         setSectionRef={setSectionRef}
         heading={messages.education.heading}
@@ -99,6 +104,7 @@ export default function Home() {
       />
 
       <Contact
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
         id={messages.contact.id}
         setSectionRef={setSectionRef}
         heading={messages.contact.heading}

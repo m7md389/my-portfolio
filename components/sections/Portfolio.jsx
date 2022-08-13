@@ -3,17 +3,19 @@ import Project from "../Project";
 import Section from "../Section";
 
 export default function Portfolio({
-  setSectionRef,
-  id,
   heading,
-  tagline,
-  projects
+  id,
+  INITIAL_ANIMATE_DELAY,
+  projects,
+  setSectionRef,
+  tagline
 }) {
+  let delayCounter = 0;
   return (
     <Section
-      setSectionRef={setSectionRef}
-      id={id}
       heading={heading}
+      id={id}
+      setSectionRef={setSectionRef}
       tagline={tagline}
     >
       <div>
@@ -21,15 +23,19 @@ export default function Portfolio({
           const isRightImage = index % 2 === 1;
           return (
             <Project
-              key={item.title}
               {...item}
-              name={item.name}
-              title={item.title}
+              animateDelay={
+                INITIAL_ANIMATE_DELAY * (index + (delayCounter += 1))
+              }
               description={item.description}
-              website={item.website}
               github={item.github}
               image={item.image}
+              INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
               isRightImage={isRightImage}
+              key={item.title}
+              name={item.name}
+              title={item.title}
+              website={item.website}
             />
           );
         })}

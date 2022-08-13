@@ -4,22 +4,27 @@ import contactStyles from "../../styles/Contact.module.scss";
 import ExternalLink from "../ExternalLink";
 
 export default function Contact({
-  setSectionRef,
-  id,
-  heading,
-  tagline,
-  phone,
   email,
-  links
+  heading,
+  id,
+  INITIAL_ANIMATE_DELAY,
+  links,
+  phone,
+  setSectionRef,
+  tagline
 }) {
   return (
     <Section
-      setSectionRef={setSectionRef}
-      id={id}
       heading={heading}
+      id={id}
+      setSectionRef={setSectionRef}
       tagline={tagline}
     >
-      <ul className={contactStyles["contact-list"]}>
+      <ul
+        className={contactStyles["contact-list"]}
+        data-aos-delay={INITIAL_ANIMATE_DELAY}
+        data-aos="fade-up"
+      >
         <li className={contactStyles["contact-item"]}>
           <h3 className={contactStyles["contact-label"]}>{phone.name}</h3>
           <ExternalLink href={phone.value}>{phone.value}</ExternalLink>

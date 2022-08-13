@@ -3,6 +3,7 @@ import aboutStyles from "../../styles/About.module.scss";
 export default function About({
   setSectionRef,
   id,
+  INITIAL_ANIMATE_DELAY,
   image,
   heading,
   tagline,
@@ -15,11 +16,17 @@ export default function About({
       id={id}
     >
       <img
-        src={image}
         alt="Picture of me"
         className={aboutStyles["about-image"]}
+        data-aos-delay={INITIAL_ANIMATE_DELAY}
+        data-aos="fade-right"
+        src={image}
       />
-      <div className={aboutStyles["about-content"]}>
+      <div
+        className={aboutStyles["about-content"]}
+        data-aos-delay={INITIAL_ANIMATE_DELAY * 2}
+        data-aos="fade-left"
+      >
         <div className={aboutStyles["about-heading"]}>
           <h2>{heading}</h2>
           <p>{tagline}</p>

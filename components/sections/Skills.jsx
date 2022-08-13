@@ -3,22 +3,28 @@ import Skill from "../Skill";
 import skillsStyles from "../../styles/Skills.module.scss";
 
 export default function Skills({
-  setSectionRef,
-  id,
   heading,
-  tagline,
-  skills
+  id,
+  INITIAL_ANIMATE_DELAY,
+  setSectionRef,
+  skills,
+  tagline
 }) {
   return (
     <Section
-      setSectionRef={setSectionRef}
-      id={id}
       heading={heading}
+      id={id}
+      setSectionRef={setSectionRef}
       tagline={tagline}
     >
       <ul className={skillsStyles["skills"]}>
-        {skills.map((skill) => (
-          <Skill key={skill.name} heading={skill.name} skills={skill.list} />
+        {skills.map((skill, index) => (
+          <Skill
+            animateDelay={INITIAL_ANIMATE_DELAY * (index + 1)}
+            heading={skill.name}
+            key={skill.name}
+            skills={skill.list}
+          />
         ))}
       </ul>
     </Section>

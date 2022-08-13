@@ -1,12 +1,16 @@
 import skillSectionStyles from "../styles/SkillSection.module.scss";
 
-export default function Title({ heading, skills }) {
+export default function Title({ animateDelay, heading, skills }) {
   return (
-    <li className={skillSectionStyles["skills"]}>
+    <li
+      data-aos-delay={animateDelay}
+      data-aos="fade-in"
+      className={skillSectionStyles["skills"]}
+    >
       <h3 className={skillSectionStyles["skills-heading"]}>{heading}</h3>
       <ul className={skillSectionStyles["skills-list"]}>
         {skills.map((skill) => (
-          <li key={skill} className={skillSectionStyles["skills-item"]}>
+          <li className={skillSectionStyles["skills-item"]} key={skill}>
             {skill}
           </li>
         ))}

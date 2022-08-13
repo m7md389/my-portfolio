@@ -4,28 +4,33 @@ import TimeEvent from "../TimeEvent";
 import timelineStyles from "../../styles/Timeline.module.scss";
 
 export default function Timeline({
-  setSectionRef,
-  id,
   heading,
+  id,
+  INITIAL_ANIMATE_DELAY,
+  setSectionRef,
   tagline,
   timelineEvents
 }) {
   return (
     <Section
-      setSectionRef={setSectionRef}
-      id={id}
       heading={heading}
+      id={id}
+      setSectionRef={setSectionRef}
       tagline={tagline}
     >
-      <ul className={timelineStyles["timeline"]}>
+      <ul
+        className={timelineStyles["timeline"]}
+        data-aos-delay={INITIAL_ANIMATE_DELAY}
+        data-aos="fade-down"
+      >
         {timelineEvents.map((event) => (
           <TimeEvent
-            key={event.title}
-            title={event.title}
             company={event.company}
             description={event.description}
-            startYear={event.startYear}
             endYear={event.endYear}
+            key={event.title}
+            startYear={event.startYear}
+            title={event.title}
           />
         ))}
       </ul>
