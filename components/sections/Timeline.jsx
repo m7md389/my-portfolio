@@ -31,6 +31,7 @@ export default function Timeline({
             key={event.title}
             startYear={event.startYear}
             title={event.title}
+            links={event.links}
           />
         ))}
       </ul>

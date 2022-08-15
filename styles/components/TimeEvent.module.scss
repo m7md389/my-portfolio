@@ -46,7 +46,7 @@
   &-company {
     font-size: $font-size--timeline-company;
     font-weight: $font-weight--light;
-    margin-block: 0.125rem 0.25rem;
+    margin-block: 0.125rem 0.75rem;
     opacity: 0.6;
     text-transform: uppercase;
   }
@@ -54,5 +54,10 @@
   &-description {
     font-size: $font-size--timeline-description;
     text-indent: 2rem;
+    line-height: 1.35;
+  }
+
+  &-links {
+    margin-top: 0.5rem;
   }
 }

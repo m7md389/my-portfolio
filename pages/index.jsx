@@ -6,8 +6,7 @@ import { getMessages, getDir } from "./../services/MessagesService";
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/sections/Footer";
-import Landing from "../components/sections/Landing";
-import Menu from "../components/sections/Menu";
+import Header from "../components/sections/Header";
 import Portfolio from "../components/sections/Portfolio";
 import Skills from "../components/sections/Skills";
 import Timeline from "../components/sections/Timeline";
@@ -43,13 +42,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Menu
+      <Header
         setCurrentSection={setCurrentSection}
         messages={messages}
         _handleNavigate={handleNavigate}
-      />
-
-      <Landing
         id={messages.landing.id}
         setSectionRef={setSectionRef}
         heading={messages.landing.name}

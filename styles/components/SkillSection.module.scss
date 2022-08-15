@@ -23,5 +23,10 @@
 
   &-item {
     text-transform: full-width;
+    margin-bottom: 0.75rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }

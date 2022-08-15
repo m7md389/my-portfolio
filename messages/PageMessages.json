@@ -42,10 +42,12 @@
             "description": "An industry-based intensive 4-month coding Bootcamp that covered the entire MERN stack and beyond. Built several end-to-end projects from scratch while adhering to solid OOP principles and communicating with several external APIs.",
             "startYear": "2021",
             "endYear": "2022",
-            "syllabus": {
-              "name": "Syllabus",
-              "link": "https://elevation.ac/wp-content/uploads/2020/12/Full-Stack-Bootcamp-Syllabuses.pdf"
-            }
+            "links": [
+              {
+                "name": "Syllabus",
+                "link": "https://elevation.ac/wp-content/uploads/2020/12/Full-Stack-Bootcamp-Syllabuses.pdf"
+              }
+            ]
           },
           {
             "title": "BSC of Computer Science and Minor Information Technology",
@@ -221,10 +223,12 @@
             "description": "An industry-based intensive 4-month coding Bootcamp that covered the entire MERN stack and beyond. Built several end-to-end projects from scratch while adhering to solid OOP principles and communicating with several external APIs.",
             "startYear": "2021",
             "endYear": "2022",
-            "syllabus": {
-              "name": "Syllabus",
-              "link": "https://elevation.ac/wp-content/uploads/2020/12/Full-Stack-Bootcamp-Syllabuses.pdf"
-            }
+            "links": [
+              {
+                "name": "Syllabus",
+                "link": "https://elevation.ac/wp-content/uploads/2020/12/Full-Stack-Bootcamp-Syllabuses.pdf"
+              }
+            ]
           },
           {
             "title": "BSC of Computer Science and Minor Information Technology",

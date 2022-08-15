@@ -3,12 +3,11 @@
 .about {
   align-items: center;
   display: flex;
-  gap: 2rem;
+  gap: 7rem;
   justify-content: center;
 
   &-image {
     flex: 1;
-    margin-inline-end: 5rem;
     padding: 1rem;
   }
 
@@ -36,5 +35,6 @@
   &-description {
     text-align: justify;
     text-indent: 3rem;
+    line-height: 1.25;
   }
 }
