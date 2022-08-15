@@ -1,7 +1,5 @@
 import Head from "next/head";
-import { useEffect, useRef, useState } from "react";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
+import { useEffect, useState } from "react";
 import { getMessages, getDir } from "./../services/MessagesService";
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
@@ -13,8 +11,8 @@ import Timeline from "../components/sections/Timeline";
 
 export default function Home() {
   const INITIAL_ANIMATE_DELAY = 300;
-  const { i18n } = useTranslation();
-  const [messages] = useState(getMessages(i18n.language));
+  const language = "en";
+  const [messages] = useState(getMessages(language));
 
   const sectionsRef = {};
   const setSectionRef = (sectionName, sectionRef) => {
@@ -22,9 +20,6 @@ export default function Home() {
   };
   const [currentSection, setCurrentSection] = useState(null);
 
-  useEffect(() => {
-    // setCurrentSection(sectionsRef[messages.landing.id]);
-  }, []);
   useEffect(() => {
     if (currentSection) {
       currentSection.scrollIntoView({ behavior: "smooth" });
@@ -35,7 +30,7 @@ export default function Home() {
     setCurrentSection(sectionsRef[section]);
   };
   return (
-    <div dir={getDir(i18n.language)}>
+    <div dir={getDir(language)}>
       <Head>
         <title>{messages.head.title}</title>
         <meta name="description" content={messages.head.description} />
@@ -116,12 +111,4 @@ export default function Home() {
       />
     </div>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, []))
-    }
-  };
 }
