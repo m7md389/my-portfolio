@@ -1,5 +1,5 @@
 import Link from "next/link";
-import navbarStyles from "../styles/Navbar.module.scss";
+import navbarStyles from "../styles/components/Navbar.module.scss";
 
 export default function Navbar({ messages, handleNavigate, isActiveToggler }) {
   function getNavClass() {

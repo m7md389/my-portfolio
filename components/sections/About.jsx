@@ -1,4 +1,4 @@
-import aboutStyles from "../../styles/About.module.scss";
+import aboutStyles from "../../styles/components/About.module.scss";
 
 export default function About({
   setSectionRef,

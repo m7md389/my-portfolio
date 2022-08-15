@@ -1,6 +1,6 @@
 import Section from "../Section";
 import Skill from "../Skill";
-import skillsStyles from "../../styles/Skills.module.scss";
+import skillsStyles from "../../styles/components/Skills.module.scss";
 
 export default function Skills({
   heading,

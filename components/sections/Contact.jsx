@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "../Section";
-import contactStyles from "../../styles/Contact.module.scss";
+import contactStyles from "../../styles/components/Contact.module.scss";
 import ExternalLink from "../ExternalLink";
 
 export default function Contact({

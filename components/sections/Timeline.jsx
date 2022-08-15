@@ -1,7 +1,7 @@
 import React from "react";
 import Section from "../Section";
 import TimeEvent from "../TimeEvent";
-import timelineStyles from "../../styles/Timeline.module.scss";
+import timelineStyles from "../../styles/components/Timeline.module.scss";
 
 export default function Timeline({
   heading,

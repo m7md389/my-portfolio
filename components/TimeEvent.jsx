@@ -1,5 +1,5 @@
 import React from "react";
-import timeEventStyles from "../styles/TimeEvent.module.scss";
+import timeEventStyles from "../styles/components/TimeEvent.module.scss";
 
 export default function TimeEvent({
   title,

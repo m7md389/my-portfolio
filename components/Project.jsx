@@ -1,6 +1,6 @@
 import React from "react";
 import ExternalLink from "./ExternalLink";
-import projectStyles from "../styles/Project.module.scss";
+import projectStyles from "../styles/components/Project.module.scss";
 
 export default function Project({
   about,

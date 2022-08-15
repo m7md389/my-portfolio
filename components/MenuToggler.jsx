@@ -1,5 +1,5 @@
 import React from "react";
-import menuTogglerStyles from "../styles/MenuToggler.module.scss";
+import menuTogglerStyles from "../styles/components/MenuToggler.module.scss";
 
 export default function MenuToggler({ isActiveToggler, handleMenuToggler }) {
   function getTogglerClass() {

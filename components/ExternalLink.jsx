@@ -1,4 +1,4 @@
-import externalLinkStyles from "../styles/ExternalLink.module.scss";
+import externalLinkStyles from "../styles/components/ExternalLink.module.scss";
 
 export default function ExternalLink({ href, children, uppercase }) {
   return (

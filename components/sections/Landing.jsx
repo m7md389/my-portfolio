@@ -1,4 +1,4 @@
-import landingStyles from "../../styles/Landing.module.scss";
+import landingStyles from "../../styles/components/Landing.module.scss";
 
 export default function Title({ setSectionRef, id, heading, tagline }) {
   return (

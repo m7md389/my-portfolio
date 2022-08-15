@@ -1,4 +1,4 @@
-import sectionStyles from "../styles/Section.module.scss";
+import sectionStyles from "../styles/components/Section.module.scss";
 
 export default function Section({
   setSectionRef,

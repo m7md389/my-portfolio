@@ -1,4 +1,4 @@
-import skillSectionStyles from "../styles/SkillSection.module.scss";
+import skillSectionStyles from "../styles/components/SkillSection.module.scss";
 
 export default function Title({ animateDelay, heading, skills }) {
   return (
