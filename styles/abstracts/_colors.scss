@@ -5,16 +5,25 @@ $black-color: #000;
 
 // GLOBAL
 $color--primary: $secondary-color;
-$background-color: #243a73;
+$background: #243a73;
+$background-tablet: $background;
+$color-pink: #fd57bf;
+$color-yellow: #ffe838;
 
 // NAV
-$color--nav-link--hover: #7c3e66;
-$background-color--nav: #16162d;
-$background-color--menu-toggler-bar: #a5becc;
 $background-color--menu-toggler--hover: #7c3e66;
+$background-color--menu-toggler-bar: linear-gradient(
+  to left,
+  $color-yellow,
+  $color-pink
+);
+$background-color--nav: #16162d;
+$color--nav-link--hover-1: $color-yellow;
+$color--nav-link--hover-2: $color-pink;
 
 // LANDING
-$color--landing-heading: #a5becc;
+$color--landing-heading-1: $color-yellow;
+$color--landing-heading-2: $color-pink;
 $color--timeline-border: rgb($white-color, 0.1);
 
 // TIMELINE

@@ -9,4 +9,8 @@
   position: relative;
   text-align: start;
   width: 70%;
+
+  @include devices(tablet) {
+    margin-inline: auto 0;
+  }
 }

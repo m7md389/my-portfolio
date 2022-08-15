@@ -1,9 +1,14 @@
+@use "../abstracts" as *;
+
 .skills {
   display: grid;
   gap: 2.5rem;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   list-style-type: none;
-  margin-top: 10rem;
   padding: 0;
   text-align: center;
+
+  @include devices(mobile) {
+    gap: 4rem;
+  }
 }

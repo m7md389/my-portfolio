@@ -20,6 +20,11 @@
     margin-inline: 7rem;
     padding-bottom: 1.5rem;
 
+    @include devices(mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+
     &:last-of-type {
       border: none;
       margin-bottom: 0;

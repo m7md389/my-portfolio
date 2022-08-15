@@ -21,7 +21,10 @@
     margin-inline-start: -15.4rem;
     min-width: 12rem;
     position: absolute;
-    text-align: start;
+
+    @include devices(mobile) {
+      font-size: $font-size--timeline-date-mobile;
+    }
   }
 
   &::after {
@@ -55,6 +58,10 @@
     font-size: $font-size--timeline-description;
     text-indent: 2rem;
     line-height: 1.35;
+
+    @include devices(mobile) {
+      font-size: $font-size--timeline-description-mobile;
+    }
   }
 
   &-links {

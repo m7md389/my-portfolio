@@ -6,6 +6,10 @@
   gap: 7rem;
   justify-content: center;
 
+  @include devices(mobile) {
+    flex-direction: column;
+  }
+
   &-image {
     flex: 1;
     padding: 1rem;
@@ -24,6 +28,10 @@
     & h2 {
       font-size: $font-size--about-heading;
       opacity: 0.3;
+
+      @include devices(tablet) {
+        font-size: $font-size--about-heading-tablet;
+      }
     }
 
     & p {

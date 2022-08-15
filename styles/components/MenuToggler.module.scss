@@ -3,6 +3,7 @@
 .menu-toggler {
   aspect-ratio: 1/1;
   cursor: pointer;
+  direction: ltr;
   display: flex;
   flex-direction: column;
   height: 5rem;
@@ -12,17 +13,17 @@
   top: 5rem;
   z-index: 100;
 
-  &:hover {
-    .bar {
-      background-color: $background-color--menu-toggler--hover;
-    }
+  @include devices(mobile) {
+    top: 2rem;
+    left: 2rem;
   }
 
   .bar {
-    background-color: $background-color--menu-toggler-bar;
+    background: $background-color--menu-toggler-bar;
     border-radius: 0.8rem;
     height: 5px;
     width: 100%;
+    transition: background 250ms;
 
     &.half {
       width: 50%;
@@ -43,6 +44,9 @@
 
   &.active {
     transform: rotate(-45deg);
+    .bar {
+      background: $background-color--menu-toggler--hover;
+    }
 
     & .start {
       transform: rotate(-450deg) translateX(0.8rem);

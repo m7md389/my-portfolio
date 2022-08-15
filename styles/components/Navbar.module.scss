@@ -1,12 +1,14 @@
 @use "../abstracts" as *;
 
 .nav {
+  align-items: center;
   background-color: $background-color--nav;
   border-bottom-left-radius: 100%;
   border-bottom-right-radius: 100%;
-  height: 100vh;
+  display: flex;
+  height: 100%;
   position: fixed;
-  top: -100vh;
+  top: -100%;
   transition: all 650ms cubic-bezier(1, 0, 0, 1);
   width: 100%;
   z-index: 75;
@@ -19,27 +21,45 @@
   &-list {
     align-items: center;
     display: flex;
-    height: 100%;
     justify-content: center;
     width: 100%;
 
+    @include devices(tablet) {
+      flex-direction: column;
+    }
+
+    @include devices(laptopOnly) {
+      flex-wrap: wrap;
+    }
+
     li {
+      cursor: pointer;
+      font-family: $font-family--nav-link;
       list-style-type: none;
       margin-inline: 2rem;
+
+      @include devices(tablet) {
+        margin-block: 2rem;
+      }
     }
   }
 
   &-link {
-    cursor: pointer;
-    font-family: $font-family--nav-link;
     font-size: $font-size--nav-link;
     padding: 1rem;
 
+    @include devices(tablet) {
+      font-size: $font-size--nav-link-tablet;
+    }
+
+    @include devices(mobile) {
+      font-size: $font-size--nav-link-mobile;
+    }
+
     &:hover,
     &:focus {
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-color: $color--nav-link--hover;
+      @include gradient-color(to top, $color-yellow, $color-pink);
+      font-weight: 600;
     }
   }
 }

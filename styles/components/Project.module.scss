@@ -7,6 +7,10 @@
   justify-content: center;
   margin-bottom: 5rem;
 
+  @include devices(mobile) {
+    flex-direction: column;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -15,7 +19,11 @@
     flex: 1;
 
     &.right {
-      order: 1;
+      order: 3;
+
+      @include devices(mobile) {
+        order: initial;
+      }
     }
   }
 

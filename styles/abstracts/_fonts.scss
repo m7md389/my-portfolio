@@ -1,0 +1,75 @@
+// DECLARE FONTS
+@font-face {
+  font-family: "The Historia Demo";
+  src: url("/fonts/TheHistoriaDemo.ttf");
+}
+
+// CONSTANTS
+$font-family--primary: "Roboto", sans-serif;
+$font-family--secondary: "The Historia Demo", sans-serif;
+$font-size--1-3: 1.3rem;
+$font-size--1-5: 1.5rem;
+$font-size--1-8: 1.8rem;
+$font-size--2: 2rem;
+$font-size--3: 3rem;
+$font-size--3-5: 3.5rem;
+$font-size--4-5: 4.5rem;
+$font-size--5: 5rem;
+$font-size--8: 8rem;
+$font-size--10: 10rem;
+$font-size--15: 15rem;
+$font-size--20: 20rem;
+$font-weight--light: 300;
+
+// GLOBAL
+$font-size--paragraph: $font-size--1-8;
+
+// HEADER
+$font-family--landing-heading: $font-family--secondary;
+$font-family--nav-link: $font-family--secondary;
+$font-size--landing-heading-laptop: $font-size--15;
+$font-size--landing-heading-mobile: $font-size--8;
+$font-size--landing-heading: $font-size--20;
+$font-size--landing-tagline-mobile: $font-size--1-5;
+$font-size--landing-tagline-tablet: $font-size--1-8;
+$font-size--landing-tagline: $font-size--2;
+$font-size--nav-link-mobile: $font-size--3-5;
+$font-size--nav-link-tablet: $font-size--4-5;
+$font-size--nav-link: $font-size--5;
+
+// ABOUT
+$font-size--about-heading: $font-size--10;
+$font-size--about-tagline: $font-size--2;
+$font-size--about-heading-tablet: $font-size--8;
+
+// SKILLS
+$font-size--skill-heading: $font-size--1-8;
+$font-size--skill-list: $font-size--1-5;
+
+// PORTFOLIO
+$font-size--project-name: $font-size--2;
+$font-size--project-title: $font-size--3;
+$font-size--project-about: $font-size--1-8;
+
+// TIMELINE
+$font-size--timeline-date-mobile: $font-size--1-3;
+$font-size--timeline-date: $font-size--1-5;
+$font-size--timeline-title: $font-size--2;
+$font-size--timeline-company: $font-size--1-8;
+$font-size--timeline-description-mobile: $font-size--1-5;
+$font-size--timeline-description: $font-size--1-8;
+
+// CONTACT
+$font-size--contact-label: $font-size--1-5;
+$font-size--contact-value: $font-size--1-8;
+
+// FOOTER
+$font-size--footer-copyright: $font-size--1-5;
+
+// SECTION
+$font-size--section-title: $font-size--3-5;
+$font-size--section-title-tablet: $font-size--3;
+$font-size--section-tagline: $font-size--1-8;
+
+// EXTERNAL LINK
+$font-size--external-link: $font-size--1-5;

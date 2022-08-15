@@ -23,7 +23,7 @@ export default function Menu({
   }
 
   return (
-    <header>
+    <header className={headerStyles["header"]}>
       <MenuToggler
         isActiveToggler={isActiveToggler}
         handleMenuToggler={handleMenuToggler}
@@ -36,11 +36,11 @@ export default function Menu({
       />
 
       <div
-        className={headerStyles["header"]}
+        className={headerStyles["landing"]}
         ref={(el) => setSectionRef(id, el)}
       >
-        <h1 className={headerStyles["header-heading"]}>{heading}</h1>
-        <p className={headerStyles["header-tagline"]}>{tagline}</p>
+        <h1 className={headerStyles["landing-heading"]}>{heading}</h1>
+        <p className={headerStyles["landing-tagline"]}>{tagline}</p>
       </div>
     </header>
   );

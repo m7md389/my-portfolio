@@ -1,6 +1,13 @@
 @use "../abstracts" as *;
 
 .header {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -11,17 +18,29 @@
   z-index: 20;
 
   &-heading {
-    background: $color--landing-heading;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include gradient-color(to top, $color-yellow, $color-pink);
     font-family: $font-family--landing-heading;
     font-size: $font-size--landing-heading;
     padding: 5rem;
     user-select: none;
+
+    @include devices(laptop) {
+      font-size: $font-size--landing-heading-laptop;
+    }
+    @include devices(mobile) {
+      font-size: $font-size--landing-heading-mobile;
+    }
   }
 
   &-tagline {
     font-size: $font-size--landing-tagline;
     font-weight: $font-weight--light;
+
+    @include devices(tablet) {
+      font-size: $font-size--landing-tagline-tablet;
+    }
+    @include devices(mobile) {
+      font-size: $font-size--landing-tagline-mobile;
+    }
   }
 }

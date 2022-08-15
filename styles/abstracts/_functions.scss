@@ -1,0 +1,31 @@
+@mixin devices($breakpoint) {
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 1250px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptopOnly {
+    @media only screen and (max-width: 1250px) and (min-width: 768px) {
+      @content;
+    }
+  }
+}
+
+@mixin gradient-color($direction, $colorOne, $colorTwo) {
+  background: linear-gradient($direction, $colorOne, $colorTwo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

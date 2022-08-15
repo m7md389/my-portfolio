@@ -9,7 +9,7 @@ export default function MenuToggler({ isActiveToggler, handleMenuToggler }) {
   }
 
   return (
-    <div dir="ltr" className={getTogglerClass()} onClick={handleMenuToggler}>
+    <div className={getTogglerClass()} onClick={handleMenuToggler}>
       <div
         className={`${menuTogglerStyles["bar"]} ${menuTogglerStyles["half"]} ${menuTogglerStyles["start"]}`}
       ></div>
