@@ -7,7 +7,7 @@
   justify-content: center;
   margin-bottom: 5rem;
 
-  @include devices(mobile) {
+  @include devices(tablet) {
     flex-direction: column;
   }
 
@@ -21,7 +21,7 @@
     &.right {
       order: 3;
 
-      @include devices(mobile) {
+      @include devices(tablet) {
         order: initial;
       }
     }

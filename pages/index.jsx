@@ -38,76 +38,76 @@ export default function Home() {
       </Head>
 
       <Header
-        setCurrentSection={setCurrentSection}
-        messages={messages}
         _handleNavigate={handleNavigate}
-        id={messages.landing.id}
-        setSectionRef={setSectionRef}
         heading={messages.landing.name}
+        id={messages.landing.id}
+        messages={messages}
+        setCurrentSection={setCurrentSection}
+        setSectionRef={setSectionRef}
         tagline={messages.landing.tagline}
       />
 
       <About
-        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
-        id={messages.about.id}
-        setSectionRef={setSectionRef}
-        heading={messages.about.heading}
-        tagline={messages.about.tagline}
         description={messages.about.description}
-        links={messages.about.links}
+        heading={messages.about.heading}
+        id={messages.about.id}
         image={messages.about.image}
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
+        links={messages.about.links}
+        setSectionRef={setSectionRef}
+        tagline={messages.about.tagline}
       />
 
       <Skills
-        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
-        id={messages.skills.id}
-        setSectionRef={setSectionRef}
         heading={messages.skills.heading}
-        tagline={messages.skills.tagline}
+        id={messages.skills.id}
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
+        setSectionRef={setSectionRef}
         skills={messages.skills.skills}
+        tagline={messages.skills.tagline}
       />
 
       <Portfolio
-        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
-        id={messages.portfolio.id}
-        setSectionRef={setSectionRef}
         heading={messages.portfolio.heading}
-        tagline={messages.portfolio.tagline}
+        id={messages.portfolio.id}
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
         projects={messages.portfolio.projects}
+        setSectionRef={setSectionRef}
+        tagline={messages.portfolio.tagline}
       />
 
       <Timeline
-        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
-        id={messages.experience.id}
-        setSectionRef={setSectionRef}
         heading={messages.experience.heading}
+        id={messages.experience.id}
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
+        setSectionRef={setSectionRef}
         tagline={messages.experience.tagline}
         timelineEvents={messages.experience.events}
       />
 
       <Timeline
-        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
-        id={messages.education.id}
-        setSectionRef={setSectionRef}
         heading={messages.education.heading}
+        id={messages.education.id}
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
+        setSectionRef={setSectionRef}
         tagline={messages.education.tagline}
         timelineEvents={messages.education.events}
       />
 
       <Contact
-        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
-        id={messages.contact.id}
-        setSectionRef={setSectionRef}
-        heading={messages.contact.heading}
-        tagline={messages.contact.tagline}
-        phone={messages.contact.phone}
         email={messages.contact.email}
+        heading={messages.contact.heading}
+        id={messages.contact.id}
+        INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
         links={messages.contact.links}
+        phone={messages.contact.phone}
+        setSectionRef={setSectionRef}
+        tagline={messages.contact.tagline}
       />
 
       <Footer
-        setSectionRef={setSectionRef}
         copyright={messages.footer.copyright}
+        setSectionRef={setSectionRef}
       />
     </div>
   );

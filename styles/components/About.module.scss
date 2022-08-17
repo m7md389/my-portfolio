@@ -3,12 +3,9 @@
 .about {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 7rem;
   justify-content: center;
-
-  @include devices(mobile) {
-    flex-direction: column;
-  }
 
   &-image {
     flex: 1;

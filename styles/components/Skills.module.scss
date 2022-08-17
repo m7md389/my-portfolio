@@ -1,12 +1,17 @@
 @use "../abstracts" as *;
 
 .skills {
-  display: grid;
+  // display: grid;
   gap: 2.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   list-style-type: none;
   padding: 0;
   text-align: center;
+  align-items: flex-start;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
   @include devices(mobile) {
     gap: 4rem;

@@ -4,7 +4,6 @@ import projectStyles from "../styles/components/Project.module.scss";
 
 export default function Project({
   about,
-  animateDelay,
   github,
   image,
   INITIAL_ANIMATE_DELAY,
@@ -17,14 +16,14 @@ export default function Project({
     <div className={projectStyles["project"]}>
       <div
         className={getImageClass(isRightImage)}
-        data-aos-delay={animateDelay}
+        data-aos-delay={INITIAL_ANIMATE_DELAY}
         data-aos={isRightImage ? "fade-right" : "fade-left"}
       >
         <img src={image} alt={`Picture of ${title} website`} />
       </div>
       <div
         className={projectStyles["project-description"]}
-        data-aos-delay={animateDelay + INITIAL_ANIMATE_DELAY}
+        data-aos-delay={INITIAL_ANIMATE_DELAY * 2}
         data-aos={isRightImage ? "fade-left" : "fade-right"}
       >
         <h4 className={projectStyles["project-name"]}>{name}</h4>

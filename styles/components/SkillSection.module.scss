@@ -1,10 +1,7 @@
 @use "../abstracts" as *;
 
 .skills {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  min-width: 30rem;
   padding: 2rem;
 
   @include devices(mobile) {
@@ -14,18 +11,32 @@
   &-heading {
     font-size: $font-size--skill-heading;
     letter-spacing: 2px;
-    margin: 2rem -2px 2rem 0;
+    margin: 2rem -2px 3.5rem 0;
+    text-align: start;
     text-transform: uppercase;
+    width: 75%;
+    position: relative;
 
     @include devices(mobile) {
       margin-block: 0 1.5rem;
+      text-align: center;
+    }
+
+    &::before {
+      background-color: $background-color--section-separator-line;
+      border-radius: 0.8rem;
+      content: "";
+      height: 1px;
+      position: absolute;
+      width: 75%;
+      bottom: -1rem;
     }
   }
 
   &-list {
     font-size: $font-size--skill-list;
     list-style-type: "-  ";
-    padding-inline: 25%;
+    margin-inline-start: 3rem;
     text-align: start;
 
     @include devices(mobile) {

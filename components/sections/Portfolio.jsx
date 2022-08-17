@@ -24,9 +24,6 @@ export default function Portfolio({
           return (
             <Project
               {...item}
-              animateDelay={
-                INITIAL_ANIMATE_DELAY * (index + (delayCounter += 1))
-              }
               description={item.description}
               github={item.github}
               image={item.image}

@@ -20,9 +20,15 @@
     margin-inline: 7rem;
     padding-bottom: 1.5rem;
 
-    @include devices(mobile) {
+    @include devices(laptopOnly) {
+      margin-inline: 3.5rem;
+    }
+
+    @include devices(tablet) {
       display: flex;
       flex-direction: column;
+      gap: 1rem;
+      margin-inline: auto;
     }
 
     &:last-of-type {
@@ -37,6 +43,10 @@
     font-weight: $font-weight--light;
     margin-inline-start: 1rem;
     text-align: start;
+
+    @include devices(mobile) {
+      margin-inline-start: 0;
+    }
   }
 
   &-value {
