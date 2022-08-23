@@ -11,6 +11,10 @@
   width: 70%;
 
   @include devices(tablet) {
-    margin-inline: auto 0;
+    margin-inline-end: -1rem;
+  }
+
+  @include devices(mobile) {
+    margin-inline-end: -6rem;
   }
 }

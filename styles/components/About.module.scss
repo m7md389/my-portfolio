@@ -8,8 +8,13 @@
   justify-content: center;
 
   &-image {
+    border-radius: 100%;
+    box-shadow: -5px 10px 20px 0 rgba(#000, 0.4);
     flex: 1;
-    padding: 1rem;
+
+    @include devices(laptopOnly) {
+      max-width: 70%;
+    }
   }
 
   &-content {
@@ -40,6 +45,6 @@
   &-description {
     text-align: justify;
     text-indent: 3rem;
-    line-height: 1.25;
+    line-height: 1.4;
   }
 }

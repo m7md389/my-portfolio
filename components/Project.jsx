@@ -9,6 +9,7 @@ export default function Project({
   INITIAL_ANIMATE_DELAY,
   isRightImage,
   name,
+  stack,
   title,
   website
 }) {
@@ -20,6 +21,7 @@ export default function Project({
         data-aos={isRightImage ? "fade-right" : "fade-left"}
       >
         <img src={image} alt={`Picture of ${title} website`} />
+        <div className={projectStyles["image-glow"]}></div>
       </div>
       <div
         className={projectStyles["project-description"]}
@@ -29,6 +31,16 @@ export default function Project({
         <h4 className={projectStyles["project-name"]}>{name}</h4>
         <h3 className={projectStyles["project-title"]}>{title}</h3>
         <p className={projectStyles["project-about"]}>{about}</p>
+        <p className={projectStyles["project-stack"]}>
+          {stack.reduce(
+            (text, current, index) =>
+              index === stack.length - 1
+                ? `${text} ${current}.`
+                : `${text} ${current}, `,
+            "Stack: "
+          )}
+        </p>
+
         {website && (
           <ExternalLink href={website.link} uppercase>
             {website.name}

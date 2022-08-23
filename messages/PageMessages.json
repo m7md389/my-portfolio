@@ -11,7 +11,7 @@
         "id": "about",
         "heading": "About",
         "tagline": "Myself",
-        "description": "Graduated Computer Science and Minor Information Technology degree, completed a hands-on Full-Stack Bootcamp, and joined the bootcamp as a Teacher Assistant after graduating from it. Specializing in writing clean and high-quality code, using the best-suited algorithms. Highly motivated, fast learner, a team player, with a keen eye for details. Seeking a web developer position to utilize my experience and knowledge.",
+        "description": "Highly motivated Full-Stack Developer, has a Computer Science and Minor Information Technology degree, and completed a hands-on Full-Stack bootcamp. Worked as a Teacher Assistant in a Full-Stack bootcamp. Specializing in writing clean and high-quality code, using the best-suited algorithms. Fast learner, a team player, with a keen eye for details. Seeking a web developer position to utilize my experience and knowledge.",
         "links": [{ "name": "GitHub", "link": "https://github.com/m7md389" }],
         "image": "http://localhost:3000/images/me.png"
       },
@@ -52,7 +52,7 @@
           {
             "title": "BSC of Computer Science and Minor Information Technology",
             "company": "Arab American University",
-            "description": "About my education in the university study ...",
+            "description": "A bachelor's degree that provided a solid base in computer science and information technologies. Prepared the students to the fields related to computer programming, data processing and database management, analyzed and built computer systems and developed internet websites.",
             "startYear": "2013",
             "endYear": "2018"
           }
@@ -97,20 +97,26 @@
         "tagline": "View some of my recent work",
         "projects": [
           {
-            "image": "https://img.freepik.com/free-vector/creative-gradient-portfolio-template_52683-79241.jpg",
+            "image": "/images/projects/my-portfolio.jpg",
             "name": "My Portfolio",
             "title": "Portfolio",
-            "description": "Some description about it ...",
+            "about": "Some description about it ...",
+            "stack": ["Next.js", "React", "AOS library", "SCSS"],
+            "website": {
+              "name": "website",
+              "link": "/"
+            },
             "github": {
               "name": "github repository",
               "link": "https://github.com/m7md389/my-portfolio"
             }
           },
           {
-            "image": "https://img.freepik.com/free-vector/creative-gradient-portfolio-template_52683-79241.jpg",
+            "image": "/images/projects/halal-alaqsa.jpg",
             "name": "Halal Alaqsa",
             "title": "About Company",
-            "description": "Some description about it ...",
+            "about": "Halal Al-Aqsa is a new company that guarantee Muslims 100% halal products and give a certification for food complies with the Islamic laws. I made them a website describes the company services.",
+            "stack": ["Next.js", "React", "SCSS", "Heroku", "GoDaddy"],
             "website": {
               "name": "website",
               "link": "http://www.halal-alaqsa.com"
@@ -121,10 +127,20 @@
             }
           },
           {
-            "image": "https://img.freepik.com/free-vector/creative-gradient-portfolio-template_52683-79241.jpg",
+            "image": "/images/projects/elevation-job-manager.jpg",
             "name": "Elevation Job Manager",
             "title": "Data Manager",
-            "description": "Some description about it ...",
+            "about": "A full-Stack application built by a group of three students to help the HR department at Elevation in tracking students' job processes.",
+            "stack": [
+              "React",
+              "Node.js",
+              "Express server",
+              "JSON Web Tokens",
+              "MongoDB",
+              "Bootstrap",
+              "Material-UI",
+              "CSS"
+            ],
             "github": {
               "name": "github repository",
               "link": "https://github.com/m7md389/elevation-job-manager"
@@ -137,7 +153,10 @@
         "heading": "Skills",
         "tagline": "About my background",
         "skills": [
-          { "name": "frameworks", "list": ["React", "MobX", "Next.js"] },
+          {
+            "name": "frameworks",
+            "list": ["React", "Redux", "MobX", "Next.js"]
+          },
           {
             "name": "client Side",
             "list": [
@@ -154,6 +173,7 @@
               "Node.js",
               "Express",
               "JsonWebToken",
+              "REST APIs",
               "MongoDB",
               "Mongoose",
               "SQL",
@@ -163,7 +183,12 @@
           },
           {
             "name": "tools",
-            "list": ["Git", "Working in collaboration in Github", "Heroku"]
+            "list": [
+              "Git",
+              "Working in collaboration in Github",
+              "Heroku",
+              "Trello"
+            ]
           },
           {
             "name": "programming languages",

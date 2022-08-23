@@ -28,7 +28,7 @@
       content: "";
       height: 1px;
       position: absolute;
-      width: 75%;
+      width: 0.75;
       bottom: -1rem;
     }
   }
@@ -36,7 +36,7 @@
   &-list {
     font-size: $font-size--skill-list;
     list-style-type: "-  ";
-    margin-inline-start: 3rem;
+    margin-inline-start: 1.5rem;
     text-align: start;
 
     @include devices(mobile) {

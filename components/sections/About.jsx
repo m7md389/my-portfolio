@@ -22,6 +22,7 @@ export default function About({
         data-aos="fade-right"
         src={image}
       />
+
       <div
         className={aboutStyles["about-content"]}
         data-aos-delay={INITIAL_ANIMATE_DELAY * 2}

@@ -1,24 +1,32 @@
-@mixin devices($breakpoint) {
-  @if $breakpoint == mobile {
-    @media only screen and (max-width: 600px) {
+@use "sass:map";
+
+$breakpoints: (
+  300: 600px,
+  500: 768px,
+  700: 1250px
+);
+
+@mixin devices($device) {
+  @if $device == mobile {
+    @media only screen and (max-width: map.get($breakpoints, 300)) {
       @content;
     }
   }
 
-  @if $breakpoint == tablet {
-    @media only screen and (max-width: 768px) {
+  @if $device == tablet {
+    @media only screen and (max-width: map.get($breakpoints, 500)) {
       @content;
     }
   }
 
-  @if $breakpoint == laptop {
-    @media only screen and (max-width: 1250px) {
+  @if $device == laptop {
+    @media only screen and (max-width: map.get($breakpoints, 700)) {
       @content;
     }
   }
 
-  @if $breakpoint == laptopOnly {
-    @media only screen and (max-width: 1250px) and (min-width: 768px) {
+  @if $device == laptopOnly {
+    @media only screen and (max-width: map.get($breakpoints, 700)) and (min-width: map.get($breakpoints, 500)) {
       @content;
     }
   }

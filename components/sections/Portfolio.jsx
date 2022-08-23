@@ -24,15 +24,9 @@ export default function Portfolio({
           return (
             <Project
               {...item}
-              description={item.description}
-              github={item.github}
-              image={item.image}
               INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
               isRightImage={isRightImage}
               key={item.title}
-              name={item.name}
-              title={item.title}
-              website={item.website}
             />
           );
         })}

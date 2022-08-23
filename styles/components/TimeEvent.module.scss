@@ -56,8 +56,9 @@
 
   &-description {
     font-size: $font-size--timeline-description;
+    text-align: justify;
     text-indent: 2rem;
-    line-height: 1.35;
+    line-height: 1.4;
 
     @include devices(mobile) {
       font-size: $font-size--timeline-description-mobile;

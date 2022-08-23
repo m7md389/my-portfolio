@@ -8,6 +8,10 @@
     padding: 5rem 3rem;
     text-align: start;
     width: 60%;
+
+    @include devices(laptopOnly) {
+      width: 70%;
+    }
   }
 
   &-item {
