@@ -22,8 +22,8 @@
     background: $background-color--menu-toggler-bar;
     border-radius: 0.8rem;
     height: 5px;
-    width: 100%;
     transition: background 250ms;
+    width: 100%;
 
     &.half {
       width: 50%;
@@ -45,7 +45,7 @@
   &.active {
     transform: rotate(-45deg);
     .bar {
-      background: $background-color--menu-toggler--hover;
+      background: $background-color--menu-toggler--active;
     }
 
     & .start {

@@ -33,6 +33,7 @@
     }
 
     li {
+      color: $color--nav-link;
       cursor: pointer;
       font-family: $font-family--nav-link;
       list-style-type: none;
@@ -58,7 +59,11 @@
 
     &:hover,
     &:focus {
-      @include gradient-color(to top, $color-yellow, $color-pink);
+      @include gradient-color(
+        to top,
+        $color--nav-link--hover-1,
+        $color--nav-link--hover-2
+      );
       font-weight: 600;
     }
   }

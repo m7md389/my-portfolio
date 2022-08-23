@@ -1,48 +1,73 @@
-// CONSTANTS
-$secondary-color: #f2ebe9;
-$white-color: #fff;
+@use "sass:map";
+
+// COLORS
 $black-color: #000;
+$pink-color: #fd57bf;
+$white-color: #fff;
+$yellow-color: rgb(255, 247, 0);
+
+// THEME
+$theme-blue: (
+  blue_1: (
+    300: hsl(210, 32%, 71%),
+    500: hsl(210, 32%, 55%),
+    700: hsl(210, 32%, 40%)
+  ),
+  blue_2: (
+    300: hsl(210, 22%, 75%),
+    500: hsl(210, 22%, 55%),
+    700: hsl(210, 22%, 40%)
+  ),
+  purple: (
+    300: hsl(258, 21%, 84%),
+    500: hsl(258, 21%, 50%),
+    700: hsl(258, 21%, 35%)
+  ),
+  red: (
+    300: hsl(356, 51%, 90%),
+    500: hsl(356, 51%, 75%),
+    700: hsl(356, 51%, 50%)
+  )
+);
 
 // GLOBAL
-$color--primary: $secondary-color;
-$background: #243a73;
+$color--primary: #f2ebe9;
+$background: map-get($theme-blue, blue_2, 500);
 $background-tablet: $background;
-$color-pink: #fd57bf;
-$color-yellow: #ffe838;
 
 // NAV
-$background-color--menu-toggler--hover: #7c3e66;
+$background-color--menu-toggler--active: map-get($theme-blue, purple, 700);
 $background-color--menu-toggler-bar: linear-gradient(
   to left,
-  $color-yellow,
-  $color-pink
+  $yellow-color,
+  $pink-color
 );
-$background-color--nav: #16162d;
-$color--nav-link--hover-1: $color-yellow;
-$color--nav-link--hover-2: $color-pink;
+$background-color--nav: map-get($theme-blue, blue_2, 700);
+$color--nav-link--hover-1: $yellow-color;
+$color--nav-link--hover-2: $pink-color;
+$color--nav-link: map-get($theme-blue, purple, 300);
 
 // LANDING
-$color--landing-heading-1: $color-yellow;
-$color--landing-heading-2: $color-pink;
+$color--landing-heading-1: $yellow-color;
+$color--landing-heading-2: $pink-color;
 $color--timeline-border: rgb($white-color, 0.1);
 
 // TIMELINE
 $background-color--timeline-dot: $white-color;
 $background-color--timeline: rgba($black-color, 0.05);
-$border-color--timeline-dot: #fd57bf;
-$border-color--timeline: #a5becc;
-// $border-color--timeline: #ffe838;
+$border-color--timeline-dot: map-get($theme-blue, red, 500);
+$border-color--timeline: map-get($theme-blue, purple, 300);
 
 // CONTACT
 $background-color--contact-list: rgba($black-color, 0.05);
 
 // FOOTER
-$background-color--footer: #0f214f;
+$background-color--footer: map-get($theme-blue, blue_2, 700);
 
 // SECTION
-$color--section-title: rgba($white-color, 0.3);
 $background-color--section-separator-line: rgba($white-color, 0.75);
+$color--section-title: rgba($white-color, 0.3);
 
 // EXTERNAL LINK
-$color--external-link: #a5becc;
 $color--external-link-hover: #d2e2ec;
+$color--external-link: #a5becc;

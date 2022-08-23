@@ -18,7 +18,7 @@
   z-index: 20;
 
   &-heading {
-    @include gradient-color(to top, $color-yellow, $color-pink);
+    @include gradient-color(to top, $yellow-color, $pink-color);
     font-family: $font-family--landing-heading;
     font-size: $font-size--landing-heading;
     padding: 5rem;
