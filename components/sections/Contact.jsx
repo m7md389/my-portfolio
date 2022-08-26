@@ -27,7 +27,7 @@ export default function Contact({
       >
         <li className={contactStyles["contact-item"]}>
           <h3 className={contactStyles["contact-label"]}>{phone.name}</h3>
-          <ExternalLink>{phone.value}</ExternalLink>
+          <ExternalLink href={`tel:${phone.value}`}>{phone.value}</ExternalLink>
         </li>
         <li className={contactStyles["contact-item"]}>
           <h3 className={contactStyles["contact-label"]}>{email.name}</h3>
