@@ -11,12 +11,12 @@ export default function TimeEvent({
   links
 }) {
   return (
-    <li
-      className={timeEventStyles["event"]}
-      data-date={`${startYear} - ${endYear}`}
-    >
+    <li className={timeEventStyles["event"]}>
       <h3 className={timeEventStyles["event-title"]}>{title}</h3>
       <h4 className={timeEventStyles["event-company"]}>{company}</h4>
+      <p
+        className={timeEventStyles["event-date"]}
+      >{`${startYear} - ${endYear}`}</p>
       <p className={timeEventStyles["event-description"]}>{description}</p>
       {links && (
         <div className={timeEventStyles["event-links"]}>

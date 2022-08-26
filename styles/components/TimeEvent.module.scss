@@ -15,8 +15,7 @@
     padding-bottom: 0;
   }
 
-  &::before {
-    content: attr(data-date);
+  &-date {
     font-size: $font-size--timeline-date;
     margin-inline-start: -15.4rem;
     min-width: 12rem;
@@ -24,6 +23,9 @@
 
     @include devices(mobile) {
       font-size: $font-size--timeline-date-mobile;
+      position: initial;
+      margin-inline-start: initial;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -36,12 +38,16 @@
     height: 1.5rem;
     margin-inline-start: -6rem;
     position: absolute;
+
+    @include devices(mobile) {
+      margin-inline-start: -4rem;
+    }
   }
 
   &-title {
     font-size: $font-size--timeline-title;
     font-weight: $font-weight--light;
-    margin-top: 1rem;
+    margin-block: 1rem 0.125rem;
     opacity: 0.3;
     text-transform: uppercase;
   }
@@ -49,7 +55,7 @@
   &-company {
     font-size: $font-size--timeline-company;
     font-weight: $font-weight--light;
-    margin-block: 0.125rem 0.75rem;
+    margin-bottom: 0.75rem;
     opacity: 0.6;
     text-transform: uppercase;
   }

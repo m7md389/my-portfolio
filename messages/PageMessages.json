@@ -13,7 +13,7 @@
         "tagline": "Myself",
         "description": "Highly motivated Full-Stack Developer, has a Computer Science and Minor Information Technology degree, and completed a hands-on Full-Stack bootcamp. Worked as a Teacher Assistant in a Full-Stack bootcamp. Specializing in writing clean and high-quality code, using the best-suited algorithms. Fast learner, a team player, with a keen eye for details. Seeking a web developer position to utilize my experience and knowledge.",
         "links": [{ "name": "GitHub", "link": "https://github.com/m7md389" }],
-        "image": "http://localhost:3000/images/me.png"
+        "image": "/images/me.png"
       },
       "contact": {
         "id": "contact",

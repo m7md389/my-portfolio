@@ -5,12 +5,17 @@
     background-color: $background-color--contact-list;
     border-radius: 0.8rem;
     margin-inline: auto;
-    padding: 5rem 3rem;
+    // padding: 5rem 3rem;
+    padding-block: 5rem;
     text-align: start;
     width: 60%;
 
     @include devices(laptopOnly) {
       width: 70%;
+    }
+
+    @include devices(miniMobile) {
+      width: 100%;
     }
   }
 
