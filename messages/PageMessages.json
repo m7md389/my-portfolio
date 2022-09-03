@@ -64,9 +64,9 @@
         "tagline": "Past and current jobs",
         "events": [
           {
-            "title": "Teacher Assistant",
+            "title": "Bootcamp Teacher Assistant",
             "company": "ELEVATION",
-            "description": "Support teachers in implementing the curriculum for a bootcamp class with +20 students and provide one-on-one support to students during the bootcamp.",
+            "description": "Support teachers in implementing curriculum for a bootcamp class with +20 students and provide one-on-one support to students during the bootcamp. Helped the students by debugging their code. Conducted code reviews for the students considering clean code principles. Passed some lectures on Javascript, CSS, React, NodeJS, and MongoDB.",
             "startYear": "2022",
             "endYear": "now"
           },
@@ -130,7 +130,7 @@
             "image": "/images/projects/elevation-job-manager.jpg",
             "name": "Elevation Job Manager",
             "title": "Data Manager",
-            "about": "A full-Stack application built by a group of three students to help the HR department at Elevation in tracking students' job processes.",
+            "about": "A full-Stack application built by a group of three students during the bootcamp to help the HR department at Elevation in tracking students' job processes.",
             "stack": [
               "React",
               "Node.js",
