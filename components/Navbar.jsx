@@ -1,4 +1,4 @@
-import Link from "next/link";
+import React from "react";
 import navbarStyles from "../styles/components/Navbar.module.scss";
 
 export default function Navbar({ messages, handleNavigate, isActiveToggler }) {

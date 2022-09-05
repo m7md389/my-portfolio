@@ -1,3 +1,4 @@
+import React from "react";
 import sectionStyles from "../styles/components/Section.module.scss";
 
 export default function Section({

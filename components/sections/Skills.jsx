@@ -1,3 +1,4 @@
+import React from "react";
 import Section from "../Section";
 import Skill from "../Skill";
 import skillsStyles from "../../styles/components/Skills.module.scss";

@@ -1,3 +1,4 @@
+import React from "react";
 import aboutStyles from "../../styles/components/About.module.scss";
 
 export default function About({

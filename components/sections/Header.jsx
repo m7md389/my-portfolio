@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import MenuToggler from "../MenuToggler";
 import Navbar from "../Navbar";
 import headerStyles from "../../styles/components/Header.module.scss";

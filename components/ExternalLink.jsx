@@ -1,3 +1,4 @@
+import React from "react";
 import externalLinkStyles from "../styles/components/ExternalLink.module.scss";
 
 export default function ExternalLink({ href, children, uppercase }) {

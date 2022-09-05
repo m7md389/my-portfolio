@@ -1,3 +1,4 @@
+import React from "react";
 import skillSectionStyles from "../styles/components/SkillSection.module.scss";
 
 export default function Title({ animateDelay, heading, skills }) {
