@@ -23,6 +23,7 @@
     font-size: $font-size--landing-heading;
     padding-block: 5rem;
     user-select: none;
+    padding-inline: 5rem;
 
     @include devices(laptop) {
       font-size: $font-size--landing-heading-laptop;
