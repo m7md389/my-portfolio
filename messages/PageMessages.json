@@ -66,7 +66,7 @@
           {
             "title": "Bootcamp Teacher Assistant",
             "company": "ELEVATION",
-            "description": "Support teachers in implementing curriculum for a bootcamp class with +20 students and provide one-on-one support to students during the bootcamp. Helped the students by debugging their code. Conducted code reviews for the students considering clean code principles. Passed some lectures on Javascript, CSS, React, NodeJS, and MongoDB.",
+            "description": "Support teachers in implementing curriculum for a bootcamp program with +20 students and provide one-on-one support to students during the bootcamp. Deployed height debugging skills by helping and debugging students' errors. Conducted code reviews for the students considering clean code principles. Facilitated review sessions on Javascript, CSS, React, NodeJS, and MongoDB.",
             "startYear": "2022",
             "endYear": "now"
           },
@@ -100,8 +100,15 @@
             "image": "/images/projects/my-portfolio.jpg",
             "name": "My Portfolio",
             "title": "Portfolio",
-            "about": "Some description about it ...",
-            "stack": ["Next.js", "React", "AOS library", "SCSS"],
+            "about": "A personal portfolio built from scratch that shows my experience.",
+            "stack": [
+              "Next.js",
+              "React",
+              "AOS library",
+              "SCSS",
+              "Heroku",
+              "GoDaddy"
+            ],
             "website": {
               "name": "website",
               "link": "/"
