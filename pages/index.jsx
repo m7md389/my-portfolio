@@ -11,7 +11,7 @@ import Skills from "../components/sections/Skills";
 import Timeline from "../components/sections/Timeline";
 
 export default function Home() {
-  const INITIAL_ANIMATE_DELAY = 300;
+  const INITIAL_ANIMATE_DELAY = 200;
   const language = "en";
   const [messages] = useState(getMessages(language));
 
@@ -35,7 +35,7 @@ export default function Home() {
       <Head>
         <title>{messages.head.title}</title>
         <meta name="description" content={messages.head.description} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/logo.ico" />
       </Head>
 
       <Header
