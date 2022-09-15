@@ -11,7 +11,7 @@ import Skills from "../components/sections/Skills";
 import Timeline from "../components/sections/Timeline";
 
 export default function Home() {
-  const INITIAL_ANIMATE_DELAY = 200;
+  const INITIAL_ANIMATE_DELAY = 300;
   const language = "en";
   const [messages] = useState(getMessages(language));
 

@@ -20,14 +20,14 @@ export default function About({
         alt="Picture of me"
         className={aboutStyles["about-image"]}
         data-aos-delay={INITIAL_ANIMATE_DELAY}
-        data-aos="fade-right"
+        data-aos="fade-down"
         src={image}
       />
 
       <div
         className={aboutStyles["about-content"]}
         data-aos-delay={INITIAL_ANIMATE_DELAY * 2}
-        data-aos="fade-left"
+        data-aos="fade-down"
       >
         <div className={aboutStyles["about-heading"]}>
           <h2>{heading}</h2>

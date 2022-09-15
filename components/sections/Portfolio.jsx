@@ -25,6 +25,7 @@ export default function Portfolio({
             <Project
               {...item}
               INITIAL_ANIMATE_DELAY={INITIAL_ANIMATE_DELAY}
+              animationDelay={INITIAL_ANIMATE_DELAY * (index + 1)}
               isRightImage={isRightImage}
               key={item.title}
             />
