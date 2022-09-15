@@ -7,6 +7,7 @@ export default function Project({
   github,
   image,
   INITIAL_ANIMATE_DELAY,
+  animationDelay,
   isRightImage,
   name,
   stack,
@@ -17,16 +18,16 @@ export default function Project({
     <div className={projectStyles["project"]}>
       <div
         className={getImageClass(isRightImage)}
-        data-aos-delay={INITIAL_ANIMATE_DELAY}
-        data-aos={isRightImage ? "fade-right" : "fade-left"}
+        data-aos-delay={animationDelay}
+        data-aos="fade-down"
       >
         <img src={image} alt={`Picture of ${title} website`} />
         <div className={projectStyles["image-glow"]}></div>
       </div>
       <div
         className={projectStyles["project-description"]}
-        data-aos-delay={INITIAL_ANIMATE_DELAY * 2}
-        data-aos={isRightImage ? "fade-left" : "fade-right"}
+        data-aos-delay={animationDelay}
+        data-aos="fade-down"
       >
         <h4 className={projectStyles["project-name"]}>{name}</h4>
         <h3 className={projectStyles["project-title"]}>{title}</h3>
